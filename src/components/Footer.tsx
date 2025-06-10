@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, Mail, Globe, Shield, Award } from 'lucide-react';
+import { Bot, Mail, Globe, Shield, Award, Linkedin, Youtube, Instagram } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -13,20 +13,20 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <Bot className="h-8 w-8 text-blue-400" />
-              <div>
-                <span className="text-xl font-bold text-white">AI LEAD</span>
-                <span className="text-xl font-bold text-blue-400 ml-1">GENERATION</span>
-              </div>
+              <img src="/src/assets/logo-white.png" alt="DHS Logo" className="h-14 w-auto" />
+              <span className="text-xl font-bold text-white whitespace-nowrap">AI Lead Generation</span>
             </Link>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Transforming businesses with AI-powered cold outreach and intelligent sales guidance. 
-              Consistent lead flow, better conversions.
-            </p>
-            <div className="space-y-2 text-sm text-gray-400">
-              <p>Den Hartogh Solutions</p>
-              <p>Chamber of Commerce: 93891237</p>
-              <p>© 2024 AI Lead Generation. All rights reserved.</p>
+            <p className="text-gray-300 mb-6 max-w-md">{t('footer.tagline')}</p>
+            <div className="flex space-x-4 mt-6">
+              <a href="#" aria-label="LinkedIn" className="hover:text-blue-400 transition-colors duration-200">
+                <Linkedin className="h-7 w-7" />
+              </a>
+              <a href="#" aria-label="YouTube" className="hover:text-red-500 transition-colors duration-200">
+                <Youtube className="h-7 w-7" />
+              </a>
+              <a href="#" aria-label="Instagram" className="hover:text-pink-400 transition-colors duration-200">
+                <Instagram className="h-7 w-7" />
+              </a>
             </div>
           </div>
 
@@ -64,25 +64,17 @@ const Footer: React.FC = () => {
 
           {/* Contact & Trust */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact & Trust</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300 text-sm">contact@aileadgeneration.com</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Globe className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300 text-sm">Multi-lingual Support</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Shield className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300 text-sm">GDPR Compliant</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Award className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300 text-sm">500+ Businesses Served</span>
+                <span className="text-gray-300 text-sm">info@denhartogh.solutions</span>
               </li>
             </ul>
+            <div className="mt-8 space-y-2 text-sm text-gray-400">
+              <p>Den Hartogh Solutions</p>
+              <p>Chamber of Commerce: 93891237</p>
+            </div>
           </div>
         </div>
 
@@ -90,7 +82,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              Powered by AI, Driven by Humans - You Always Have the Steering Wheel
+              © 2024 Den Hartogh Solutions. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">

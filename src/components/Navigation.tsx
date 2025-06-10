@@ -41,7 +41,7 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group pt-2">
-            <img className="h-16 w-auto" src="/src/assets/DHS Logo marine blue.png" alt="DHS Logo" />
+            <img className="h-16 w-auto" src="/src/assets/logo.png" alt="DHS Logo" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -68,10 +68,7 @@ const Navigation: React.FC = () => {
               to="/contact"
               className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#1B365D] hover:bg-[#1B365D]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1B365D] transition-colors duration-200"
             >
-              {language === 'en' ? 'Let\'s talk strategy!' :
-               language === 'nl' ? 'Laten we strategie bespreken!' :
-               language === 'de' ? 'Lassen Sie uns Strategie besprechen!' :
-               '¡Hablemos de estrategia!'}
+              {t('nav.cta')}
             </Link>
 
             {/* Language Switcher */}
@@ -139,10 +136,7 @@ const Navigation: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="block px-3 py-2 text-base font-medium text-[#1B365D] hover:bg-[#1B365D]/10"
               >
-                {language === 'en' ? 'Let\'s talk strategy!' :
-                 language === 'nl' ? 'Laten we strategie bespreken!' :
-                 language === 'de' ? 'Lassen Sie uns Strategie besprechen!' :
-                 '¡Hablemos de estrategia!'}
+                {t('nav.cta')}
               </Link>
             </div>
           </div>

@@ -17,61 +17,65 @@ const Home: React.FC = () => {
   ];
 
   const stats = [
-    { number: '20+', label: 'Businesses Served', icon: Users },
-    { number: '85%', label: 'Lead Quality Improvement', icon: TrendingUp },
-    { number: '3x', label: 'Pipeline Growth Rate', icon: BarChart3 },
-    { number: '24/7', label: 'AI System Monitoring', icon: Bot }
+    { number: '20+', label: t('home.stats.1.label'), icon: Users },
+    { number: '85%', label: t('home.stats.2.label'), icon: TrendingUp },
+    { number: '3x', label: t('home.stats.3.label'), icon: BarChart3 },
+    { number: '24/7', label: t('home.stats.4.label'), icon: Bot }
   ];
 
   const processSteps = [
     {
       step: '01',
-      title: 'Target & Collect',
-      description: 'AI identifies and enriches your ideal prospects with precision data',
+      title: t('home.process.1.title'),
+      description: t('home.process.1.desc'),
       icon: Target
     },
     {
       step: '02',
-      title: 'Cold Outreach',
-      description: 'Automated personalized campaigns fill your pipeline consistently',
+      title: t('home.process.2.title'),
+      description: t('home.process.2.desc'),
       icon: Mail
     },
     {
       step: '03',
-      title: 'AI Guidance',
-      description: 'Real-time insights guide your follow-up for maximum conversion',
+      title: t('home.process.3.title'),
+      description: t('home.process.3.desc'),
       icon: Bot
     },
     {
       step: '04',
-      title: 'Close Deals',
-      description: 'Convert warm leads into customers with strategic guidance',
+      title: t('home.process.4.title'),
+      description: t('home.process.4.desc'),
       icon: CheckCircle
     }
   ];
 
   const testimonials = [
     {
-      name: 'Ravi Ramnarain',
-      company: 'Solvitec',
-      quote: 'I had no idea how to approach cold outreach. Paul helped me effectively reach potential clients and get through to customers.',
-      rating: 5,
-      result: 'Successful outreach'
+      quote: t('home.testimonials.1.quote'),
+      name: t('home.testimonials.1.name'),
+      company: t('home.testimonials.1.company'),
+      result: t('home.testimonials.1.result'),
     },
     {
-      name: 'Robin Meijerman',
-      company: 'Independent',
-      quote: 'I noticed I was always responding too late or incorrectly to leads. With the AI suggestions, I can respond faster and more effectively.',
-      rating: 5,
-      result: 'Faster responses'
+      quote: t('home.testimonials.2.quote'),
+      name: t('home.testimonials.2.name'),
+      company: t('home.testimonials.2.company'),
+      result: t('home.testimonials.2.result'),
     },
     {
-      name: 'Jacco Den Hartogh',
-      company: 'The FilmFactory',
-      quote: 'Paul helped us effectively reach our target audience and, through AI, respond more precisely and quickly to potential clients.',
-      rating: 5,
-      result: 'Targeted outreach'
+      quote: t('home.testimonials.3.quote'),
+      name: t('home.testimonials.3.name'),
+      company: t('home.testimonials.3.company'),
+      result: t('home.testimonials.3.result'),
     }
+  ];
+
+  const controlPoints = [
+    t('home.control.point1'),
+    t('home.control.point2'),
+    t('home.control.point3'),
+    t('home.control.point4'),
   ];
 
   return (
@@ -93,9 +97,9 @@ const Home: React.FC = () => {
           
           {/* Grid pattern */}
           <div className="absolute inset-0" style={{
-            backgroundImage: `linear-gradient(to right, #1B365D/15 1.5px, transparent 1.5px),
-                             linear-gradient(to bottom, #1B365D/15 1.5px, transparent 1.5px)`,
-            backgroundSize: '40px 40px'
+            backgroundImage: `linear-gradient(to right, #1B365D/10 1px, transparent 1px),
+                             linear-gradient(to bottom, #1B365D/10 1px, transparent 1px)`,
+            backgroundSize: '20px 20px'
           }}></div>
         </div>
 
@@ -103,11 +107,11 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <AnimatedSection animation="fadeIn">
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                  AI Lead Generation
+                <h1 className="text-4xl md:text-6xl font-bold text-[#1B365D] mb-6">
+                  {t('home.hero.title')}
                 </h1>
                 <p className="text-xl md:text-2xl text-[#1B365D] font-semibold mb-8">
-                  Smarter Lead Generation – Powered by AI, Driven by Humans.
+                  {t('home.hero.subtitle')}
                 </p>
               </AnimatedSection>
 
@@ -150,9 +154,7 @@ const Home: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {t('home.pain.title')}
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Common challenges that prevent businesses from achieving consistent lead generation and conversion success
-            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t('home.pain.subtitle')}</p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -176,10 +178,10 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection animation="slideUp" className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              How Our Cold Outreach Process Works
+              {t('home.process.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to fill your pipeline with qualified leads and convert them into customers
+              {t('home.process.subtitle')}
             </p>
           </AnimatedSection>
 
@@ -232,65 +234,13 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Human Control Section */}
-      <section className="py-20 bg-gradient-to-b from-white via-blue-50 to-[#1B365D]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection animation="slideUp" delay={400} className="hidden lg:block">
-              <div className="relative">
-                <img 
-                  src="/images/dashboard.png" 
-                  alt="Human Control in AI-Powered Sales" 
-                  className="relative w-full h-auto bg-white"
-                />
-              </div>
-            </AnimatedSection>
-
-            <div>
-              <AnimatedSection animation="fadeIn">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  You're Always in Control
-                </h2>
-                <p className="text-xl text-gray-600 mb-12">
-                  Our technology supports your decisions — not replaces them. You lead the process, we power it.
-                </p>
-
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="h-6 w-6 text-[#1B365D] mt-1 flex-shrink-0" />
-                    <p className="text-gray-700">Campaigns only go live with your approval</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Users className="h-6 w-6 text-[#1B365D] mt-1 flex-shrink-0" />
-                    <p className="text-gray-700">Real collaboration with your strategy team — no black box AI</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Target className="h-6 w-6 text-[#1B365D] mt-1 flex-shrink-0" />
-                    <p className="text-gray-700">Every AI recommendation comes with context and clarity</p>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <Zap className="h-6 w-6 text-[#1B365D] mt-1 flex-shrink-0" />
-                    <p className="text-gray-700">You stay in full control of your sales flow — we support, not override</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection animation="slideUp" className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Proven Results in Numbers
-            </h2>
-            <p className="text-lg text-gray-600">
-              Our AI-powered cold outreach delivers consistent, measurable growth
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('home.stats.title')}</h2>
+            <p className="text-lg text-gray-600">{t('home.stats.subtitle')}</p>
           </AnimatedSection>
-
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <AnimatedSection
@@ -314,14 +264,9 @@ const Home: React.FC = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection animation="slideUp" className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              What Our Clients Say
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Hear from businesses that have transformed their lead generation and sales process
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('home.testimonials.title')}</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t('home.testimonials.subtitle')}</p>
           </AnimatedSection>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <AnimatedSection
@@ -330,11 +275,6 @@ const Home: React.FC = () => {
                 delay={index * 100}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
                 <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
                 <div className="border-t border-gray-100 pt-4">
                   <p className="font-semibold text-gray-900">{testimonial.name}</p>
@@ -351,12 +291,8 @@ const Home: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection animation="slideUp">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">
-              Ready to Fill Your Pipeline with Quality Leads?
-            </h2>
-            <p className="text-xl text-gray-600 mb-12">
-              Join 500+ businesses already growing with our AI-powered cold outreach and sales guidance system.
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('home.cta.title')}</h2>
+            <p className="text-xl text-gray-600 mb-12">{t('home.cta.subtitle')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -369,7 +305,7 @@ const Home: React.FC = () => {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 text-lg font-semibold text-[#1B365D] bg-blue-50 rounded-2xl hover:bg-blue-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                {t('common.learnMore')}
+                {t('home.learnMore')}
               </Link>
             </div>
           </AnimatedSection>
@@ -377,6 +313,6 @@ const Home: React.FC = () => {
       </section>
     </div>
   );
-};
+}
 
 export default Home;
