@@ -106,33 +106,33 @@ const Home: React.FC = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <AnimatedSection animation="fadeIn">
+          <AnimatedSection animation="fadeIn">
                 <h1 className="text-4xl md:text-6xl font-bold text-[#1B365D] mb-6">
                   {t('home.hero.title')}
-                </h1>
+            </h1>
                 <p className="text-xl md:text-2xl text-[#1B365D] font-semibold mb-8">
-                  {t('home.hero.subtitle')}
-                </p>
-              </AnimatedSection>
+              {t('home.hero.subtitle')}
+            </p>
+          </AnimatedSection>
 
-              <AnimatedSection animation="slideUp" delay={300}>
+          <AnimatedSection animation="slideUp" delay={300}>
                 <p className="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed">
-                  {t('home.hero.description')}
-                </p>
-              </AnimatedSection>
+              {t('home.hero.description')}
+            </p>
+          </AnimatedSection>
 
               <div className="flex justify-center">
-                <AnimatedSection animation="scale" delay={600}>
-                  <Link
-                    to="/contact"
+          <AnimatedSection animation="scale" delay={600}>
+            <Link
+              to="/contact"
                     className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#1B365D] to-[#1B365D]/90 rounded-2xl hover:from-[#1B365D]/90 hover:to-[#1B365D]/80 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group"
-                  >
-                    {t('home.hero.cta')}
-                    <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Link>
-                </AnimatedSection>
-              </div>
-            </div>
+            >
+              {t('home.hero.cta')}
+              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+            </Link>
+          </AnimatedSection>
+        </div>
+                  </div>
 
             <AnimatedSection animation="slideUp" delay={400} className="hidden lg:block">
               <div className="relative">
@@ -141,8 +141,8 @@ const Home: React.FC = () => {
                   alt="AI-Powered Lead Generation" 
                   className="relative w-full h-auto opacity-80"
                 />
-              </div>
-            </AnimatedSection>
+                </div>
+              </AnimatedSection>
           </div>
         </div>
       </section>
@@ -256,8 +256,8 @@ const Home: React.FC = () => {
                 </div>
               </AnimatedSection>
             ))}
-          </div>
-        </div>
+                </div>
+              </div>
       </section>
 
       {/* Testimonials Section */}
@@ -266,7 +266,7 @@ const Home: React.FC = () => {
           <AnimatedSection animation="slideUp" className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t('home.testimonials.title')}</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t('home.testimonials.subtitle')}</p>
-          </AnimatedSection>
+            </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <AnimatedSection
@@ -280,8 +280,8 @@ const Home: React.FC = () => {
                   <p className="font-semibold text-gray-900">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.company}</p>
                   <p className="text-sm font-medium text-gray-900 mt-2">{testimonial.result}</p>
-                </div>
-              </AnimatedSection>
+              </div>
+            </AnimatedSection>
             ))}
           </div>
         </div>

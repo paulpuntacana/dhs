@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bot, Mail, Globe, Shield, Award, Linkedin, Youtube, Instagram } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import logoWhite from '../assets/logo-white.png';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -13,7 +14,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <img src="/src/assets/logo-white.png" alt="DHS Logo" className="h-14 w-auto" />
+              <img src={logoWhite} alt="DHS Logo" className="h-14 w-auto" />
               <span className="text-xl font-bold text-white whitespace-nowrap">AI Lead Generation</span>
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">{t('footer.tagline')}</p>

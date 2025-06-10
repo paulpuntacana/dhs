@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage, Language } from '../contexts/LanguageContext';
+import logo from '../assets/logo.png';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +42,7 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group pt-2">
-            <img className="h-16 w-auto" src="/src/assets/logo.png" alt="DHS Logo" />
+            <img className="h-16 w-auto" src={logo} alt="DHS Logo" />
           </Link>
 
           {/* Desktop Navigation */}
