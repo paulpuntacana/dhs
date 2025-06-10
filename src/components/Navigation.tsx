@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe, Bot } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage, Language } from '../contexts/LanguageContext';
 
 const Navigation: React.FC = () => {
@@ -18,11 +18,11 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const languages: { code: Language; name: string; flag: string }[] = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
+  const languages: { code: Language; name: string }[] = [
+    { code: 'en', name: 'English' },
+    { code: 'nl', name: 'Nederlands' },
+    { code: 'de', name: 'Deutsch' },
+    { code: 'es', name: 'Español' },
   ];
 
   const navItems = [
@@ -38,28 +38,21 @@ const Navigation: React.FC = () => {
       isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <Bot className="h-8 w-8 text-blue-600 group-hover:scale-110 transition-transform duration-200" />
-              <div className="absolute -inset-1 bg-blue-600/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-            </div>
-            <div>
-              <span className="text-xl font-bold text-gray-900">AI LEAD</span>
-              <span className="text-xl font-bold text-blue-600 ml-1">GENERATION</span>
-            </div>
+          <Link to="/" className="flex items-center space-x-3 group pt-2">
+            <img className="h-16 w-auto" src="/src/assets/DHS Logo marine blue.png" alt="DHS Logo" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ml-auto mr-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-blue-600 hover:scale-105 ${
+                className={`px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-[#1B365D] hover:scale-105 ${
                   location.pathname === item.path
-                    ? 'text-blue-600 border-b-2 border-blue-600'
+                    ? 'text-[#1B365D] border-b-2 border-[#1B365D]'
                     : 'text-gray-700'
                 }`}
               >
@@ -68,16 +61,27 @@ const Navigation: React.FC = () => {
             ))}
           </div>
 
-          {/* Language Switcher & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          {/* CTA & Language Switcher */}
+          <div className="flex items-center space-x-6">
+            {/* CTA Button */}
+            <Link
+              to="/contact"
+              className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#1B365D] hover:bg-[#1B365D]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1B365D] transition-colors duration-200"
+            >
+              {language === 'en' ? 'Let\'s talk strategy!' :
+               language === 'nl' ? 'Laten we strategie bespreken!' :
+               language === 'de' ? 'Lassen Sie uns Strategie besprechen!' :
+               '¡Hablemos de estrategia!'}
+            </Link>
+
             {/* Language Switcher */}
             <div className="relative">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#1B365D] transition-colors duration-200"
               >
-                <Globe className="h-4 w-4" />
-                <span className="hidden sm:inline">{languages.find(l => l.code === language)?.flag}</span>
+                <span>{languages.find(l => l.code === language)?.name}</span>
+                <ChevronDown className="h-4 w-4" />
               </button>
               
               {isLangOpen && (
@@ -90,12 +94,11 @@ const Navigation: React.FC = () => {
                           setLanguage(lang.code);
                           setIsLangOpen(false);
                         }}
-                        className={`flex items-center space-x-3 w-full px-4 py-2 text-sm hover:bg-blue-50 transition-colors duration-200 ${
-                          language === lang.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                        className={`flex items-center w-full px-4 py-2 text-sm hover:bg-[#1B365D]/10 transition-colors duration-200 ${
+                          language === lang.code ? 'bg-[#1B365D]/10 text-[#1B365D]' : 'text-gray-700'
                         }`}
                       >
-                        <span>{lang.flag}</span>
-                        <span>{lang.name}</span>
+                        {lang.name}
                       </button>
                     ))}
                   </div>
@@ -106,7 +109,7 @@ const Navigation: React.FC = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="md:hidden p-2 text-gray-700 hover:text-[#1B365D] transition-colors duration-200"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -124,13 +127,23 @@ const Navigation: React.FC = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                     location.pathname === item.path
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                      ? 'text-[#1B365D] bg-[#1B365D]/10'
+                      : 'text-gray-700 hover:text-[#1B365D] hover:bg-[#1B365D]/10'
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
+              <Link
+                to="/contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-[#1B365D] hover:bg-[#1B365D]/10"
+              >
+                {language === 'en' ? 'Let\'s talk strategy!' :
+                 language === 'nl' ? 'Laten we strategie bespreken!' :
+                 language === 'de' ? 'Lassen Sie uns Strategie besprechen!' :
+                 '¡Hablemos de estrategia!'}
+              </Link>
             </div>
           </div>
         )}
