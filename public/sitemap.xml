@@ -1,27 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- English (EN) Pages -->
   <url>
-    <loc>https://denhartogh.solutions/</loc>
+    <loc>https://denhartogh.solutions/en</loc>
     <lastmod>2025-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en" />
   </url>
+  
   <url>
-    <loc>https://denhartogh.solutions/approach</loc>
+    <loc>https://denhartogh.solutions/en/approach</loc>
     <lastmod>2025-01-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/approach" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/aanpak" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/ansatz" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/enfoque" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/approach" />
   </url>
+  
   <url>
-    <loc>https://denhartogh.solutions/about</loc>
+    <loc>https://denhartogh.solutions/en/about</loc>
     <lastmod>2025-01-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/about" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/over-ons" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/uber-uns" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/acerca-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/about" />
   </url>
+  
   <url>
-    <loc>https://denhartogh.solutions/contact</loc>
+    <loc>https://denhartogh.solutions/en/contact</loc>
     <lastmod>2025-01-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/contact" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/kontakt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/contact" />
   </url>
+
+  <!-- Dutch (NL) Pages -->
+  <url>
+    <loc>https://denhartogh.solutions/nl</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en" />
+  </url>
+  
+  <url>
+    <loc>https://denhartogh.solutions/nl/aanpak</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/approach" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/aanpak" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/ansatz" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/enfoque" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/approach" />
+  </url>
+  
+  <url>
+    <loc>https://denhartogh.solutions/nl/over-ons</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/about" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/over-ons" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/uber-uns" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/acerca-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/about" />
+  </url>
+  
+  <url>
+    <loc>https://denhartogh.solutions/nl/contact</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/contact" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/kontakt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/contact" />
+  </url>
+
+  <!-- German (DE) Pages -->
+  <url>
+    <loc>https://denhartogh.solutions/de</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en" />
+  </url>
+  
+  <url>
+    <loc>https://denhartogh.solutions/de/ansatz</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/approach" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/aanpak" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/ansatz" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/enfoque" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/approach" />
+  </url>
+  
+  <url>
+    <loc>https://denhartogh.solutions/de/uber-uns</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/about" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/over-ons" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/uber-uns" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/acerca-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/about" />
+  </url>
+  
+  <url>
+    <loc>https://denhartogh.solutions/de/kontakt</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/contact" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/kontakt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/contact" />
+  </url>
+
+  <!-- Spanish (ES) Pages -->
+  <url>
+    <loc>https://denhartogh.solutions/es</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en" />
+  </url>
+  
+  <url>
+    <loc>https://denhartogh.solutions/es/enfoque</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/approach" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/aanpak" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/ansatz" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/enfoque" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/approach" />
+  </url>
+  
+  <url>
+    <loc>https://denhartogh.solutions/es/acerca-de</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/about" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/over-ons" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/uber-uns" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/acerca-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/about" />
+  </url>
+  
+  <url>
+    <loc>https://denhartogh.solutions/es/contacto</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/contact" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/kontakt" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/contact" />
+  </url>
+  
 </urlset> 

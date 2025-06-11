@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export type Language = 'en' | 'nl' | 'de' | 'es';
 
@@ -6,7 +7,70 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  getLocalizedPath: (path: string, targetLang?: Language) => string;
 }
+
+// URL mapping for each language
+const urlMappings = {
+  en: {
+    '/': '/',
+    '/approach': '/approach',
+    '/about': '/about',
+    '/contact': '/contact'
+  },
+  nl: {
+    '/': '/',
+    '/approach': '/aanpak',
+    '/about': '/over-ons',
+    '/contact': '/contact'
+  },
+  de: {
+    '/': '/',
+    '/approach': '/ansatz',
+    '/about': '/uber-uns',
+    '/contact': '/kontakt'
+  },
+  es: {
+    '/': '/',
+    '/approach': '/enfoque',
+    '/about': '/acerca-de',
+    '/contact': '/contacto'
+  }
+};
+
+// Reverse mapping to get English path from localized path
+const reverseUrlMappings: Record<string, Record<string, string>> = {};
+Object.keys(urlMappings).forEach(lang => {
+  reverseUrlMappings[lang] = {};
+  Object.entries(urlMappings[lang as Language]).forEach(([englishPath, localizedPath]) => {
+    reverseUrlMappings[lang][localizedPath] = englishPath;
+  });
+});
+
+// Helper function to detect language from URL
+const getLanguageFromPath = (pathname: string): Language => {
+  const segments = pathname.split('/').filter(Boolean);
+  const firstSegment = segments[0];
+  
+  if (['en', 'nl', 'de', 'es'].includes(firstSegment)) {
+    return firstSegment as Language;
+  }
+  
+  return 'en'; // Default to English
+};
+
+// Helper function to get current page path without language
+const getPageFromPath = (pathname: string, language: Language): string => {
+  const segments = pathname.split('/').filter(Boolean);
+  const langIndex = segments.findIndex(segment => segment === language);
+  
+  if (langIndex !== -1) {
+    const localizedPath = '/' + segments.slice(langIndex + 1).join('/');
+    return reverseUrlMappings[language][localizedPath] || '/';
+  }
+  
+  return '/';
+};
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -909,28 +973,34 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const getInitialLanguage = (): Language => {
-    // Check localStorage first
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && ['en', 'nl', 'de', 'es'].includes(savedLanguage)) {
-      return savedLanguage;
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  const [language, setLanguage] = useState<Language>(() => {
+    return getLanguageFromPath(location.pathname);
+  });
+
+  // Update language when URL changes
+  useEffect(() => {
+    const urlLanguage = getLanguageFromPath(location.pathname);
+    if (urlLanguage !== language) {
+      setLanguage(urlLanguage);
     }
-    
-    // Detect browser language
-    const browserLang = navigator.language.toLowerCase();
-    if (browserLang.startsWith('es')) return 'es'; // Spanish
-    if (browserLang.startsWith('nl')) return 'nl'; // Dutch
-    if (browserLang.startsWith('de')) return 'de'; // German
-    
-    return 'en'; // Default to English
+  }, [location.pathname]);
+
+  // Function to get localized path for a given route
+  const getLocalizedPath = (path: string, targetLang?: Language): string => {
+    const lang = targetLang || language;
+    const langMappings = urlMappings[lang] as Record<string, string>;
+    const localizedPath = langMappings[path] || path;
+    return `/${lang}${localizedPath === '/' ? '' : localizedPath}`;
   };
 
-  const [language, setLanguage] = useState<Language>(getInitialLanguage);
-
-  // Save to localStorage when language changes
-  const handleSetLanguage = (lang: Language) => {
-    setLanguage(lang);
-    localStorage.setItem('language', lang);
+  // Handle language changes with navigation
+  const handleSetLanguage = (newLang: Language) => {
+    const currentPage = getPageFromPath(location.pathname, language);
+    const newPath = getLocalizedPath(currentPage, newLang);
+    navigate(newPath, { replace: true });
   };
 
   const t = (key: string): string => {
@@ -938,7 +1008,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
+    <LanguageContext.Provider value={{ 
+      language, 
+      setLanguage: handleSetLanguage, 
+      t,
+      getLocalizedPath 
+    }}>
       {children}
     </LanguageContext.Provider>
   );

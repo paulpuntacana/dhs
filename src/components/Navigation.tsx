@@ -8,9 +8,9 @@ const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage, t, getLocalizedPath } = useLanguage();
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === `/${language}` || location.pathname === `/${language}/`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,10 +28,10 @@ const Navigation: React.FC = () => {
   ];
 
   const menuItems = [
-    { path: '/', label: t('nav.home') },
-    { path: '/approach', label: t('nav.approach') },
-    { path: '/about', label: t('nav.about') },
-    { path: '/contact', label: t('nav.contact') },
+    { path: '/', label: t('nav.home'), localizedPath: getLocalizedPath('/') },
+    { path: '/approach', label: t('nav.approach'), localizedPath: getLocalizedPath('/approach') },
+    { path: '/about', label: t('nav.about'), localizedPath: getLocalizedPath('/about') },
+    { path: '/contact', label: t('nav.contact'), localizedPath: getLocalizedPath('/contact') },
   ];
 
   return (
@@ -43,7 +43,7 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group pt-2">
+          <Link to={getLocalizedPath('/')} className="flex items-center space-x-3 group pt-2">
             <img className="h-16 w-auto" src={logo} alt="DHS Logo" />
           </Link>
 
@@ -52,9 +52,9 @@ const Navigation: React.FC = () => {
             {menuItems.map((item) => (
               <Link
                 key={item.path}
-                to={item.path}
+                to={item.localizedPath}
                 className={`px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-[#1B365D] hover:scale-105 ${
-                  location.pathname === item.path
+                  location.pathname === item.localizedPath
                     ? `text-[#1B365D] ${!isHomePage ? 'border-b-2 border-[#1B365D]' : ''}`
                     : 'text-gray-700'
                 }`}
@@ -68,7 +68,7 @@ const Navigation: React.FC = () => {
           <div className="flex items-center space-x-6">
             {/* CTA Button - Hidden on mobile */}
             <Link
-              to="/contact"
+              to={getLocalizedPath('/contact')}
               className="hidden md:inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl group"
             >
               {t('nav.cta')}
@@ -125,10 +125,10 @@ const Navigation: React.FC = () => {
               {menuItems.map((item) => (
                 <Link
                   key={item.path}
-                  to={item.path}
+                  to={item.localizedPath}
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
-                    location.pathname === item.path
+                    location.pathname === item.localizedPath
                       ? 'text-[#1B365D] bg-[#1B365D]/10'
                       : 'text-gray-700 hover:text-[#1B365D] hover:bg-[#1B365D]/10'
                   }`}
@@ -140,7 +140,7 @@ const Navigation: React.FC = () => {
               {/* Mobile CTA Button */}
               <div className="px-3 py-3">
                 <Link
-                  to="/contact"
+                  to={getLocalizedPath('/contact')}
                   onClick={() => setIsMenuOpen(false)}
                   className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
