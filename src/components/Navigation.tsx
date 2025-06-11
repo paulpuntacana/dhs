@@ -66,10 +66,10 @@ const Navigation: React.FC = () => {
 
           {/* CTA & Language Switcher */}
           <div className="flex items-center space-x-6">
-            {/* CTA Button */}
+            {/* CTA Button - Hidden on mobile */}
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl group"
+              className="hidden md:inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl group"
             >
               {t('nav.cta')}
             </Link>
@@ -81,7 +81,7 @@ const Navigation: React.FC = () => {
                 className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#1B365D] transition-colors duration-200"
               >
                 <span className="text-base">{languages.find(l => l.code === language)?.flag}</span>
-                <span>{languages.find(l => l.code === language)?.name}</span>
+                <span className="hidden sm:inline">{languages.find(l => l.code === language)?.name}</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
               
@@ -136,13 +136,17 @@ const Navigation: React.FC = () => {
                   {item.label}
                 </Link>
               ))}
-              <Link
-                to="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="block px-3 py-2 text-base font-medium text-[#1B365D] hover:bg-[#1B365D]/10"
-              >
-                {t('nav.cta')}
-              </Link>
+              
+              {/* Mobile CTA Button */}
+              <div className="px-3 py-3">
+                <Link
+                  to="/contact"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  {t('nav.cta')}
+                </Link>
+              </div>
             </div>
           </div>
         )}
