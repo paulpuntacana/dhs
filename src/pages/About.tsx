@@ -78,7 +78,7 @@ const About: React.FC = () => {
               <div className="relative bg-gradient-to-br from-[#104ee3]/10 to-[#104ee3]/5 rounded-2xl p-8 shadow-xl">
                 <div className="flex items-center justify-center">
                   <img 
-                    src="/src/assets/foto.jpg" 
+                    src="/images/foto.jpg" 
                     alt="Paul den Hartogh - Founder DHS"
                     className="w-72 h-72 object-cover rounded-xl shadow-lg"
                   />
