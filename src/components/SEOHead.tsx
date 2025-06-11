@@ -12,24 +12,24 @@ const SEOHead = () => {
 
   const seoData: Record<string, SEOData> = {
     en: {
-      title: 'AI Lead Generation - Smarter Lead Generation Powered by AI & Strategy',
-      description: 'Transform your business with AI-powered lead generation. Get consistent, high-quality leads and AI-driven sales guidance. Powered by AI, Driven by Humans.',
-      keywords: 'AI lead generation, automated outreach, sales guidance, lead conversion, B2B leads, cold outreach'
+      title: 'DHS – Smart Outreach. Human-Centered.',
+      description: 'Transform your B2B sales with AI-powered lead generation. Get qualified prospects, automated outreach, and AI sales guidance. 30-day results guaranteed.',
+      keywords: 'AI lead generation, B2B sales automation, cold outreach, sales AI, lead qualification, prospect automation, sales intelligence'
     },
     nl: {
-      title: 'AI Leadgeneratie - Slimmere leadgeneratie met AI & Strategie',
-      description: 'Transformeer je bedrijf met AI-gedreven leadgeneratie. Krijg consistente, hoogwaardige leads en AI-ondersteunde salesbegeleiding. Aangedreven door AI, gestuurd door mensen.',
-      keywords: 'AI leadgeneratie, geautomatiseerde outreach, sales begeleiding, lead conversie, B2B leads, cold outreach'
+      title: 'DHS – Smart Outreach. Human-Centered.',
+      description: 'Transformeer je B2B sales met AI-gedreven leadgeneratie. Krijg gekwalificeerde prospects, geautomatiseerde outreach en AI sales begeleiding. 30-dagen resultaat gegarandeerd.',
+      keywords: 'AI leadgeneratie, B2B sales automatisering, cold outreach, sales AI, lead kwalificatie, prospect automatisering, sales intelligence'
     },
     de: {
-      title: 'AI Lead Generierung - Intelligentere Lead-Generierung mit KI & Strategie',
-      description: 'Transformieren Sie Ihr Unternehmen mit KI-gestützter Lead-Generierung. Erhalten Sie konsistente, hochwertige Leads und KI-gesteuerte Verkaufsberatung. Angetrieben von KI, geführt von Menschen.',
-      keywords: 'AI Lead-Generierung, automatisierte Outreach, Verkaufsberatung, Lead-Konversion, B2B Leads, Cold Outreach'
+      title: 'DHS – Smart Outreach. Human-Centered.',
+      description: 'Transformieren Sie Ihren B2B-Vertrieb mit KI-gestützter Lead-Generierung. Erhalten Sie qualifizierte Prospects, automatisierte Outreach und KI-Verkaufsberatung. 30-Tage Ergebnis garantiert.',
+      keywords: 'AI Lead-Generierung, B2B Vertriebsautomatisierung, Cold Outreach, Vertriebs-KI, Lead-Qualifizierung, Prospect-Automatisierung, Vertriebsintelligenz'
     },
     es: {
-      title: 'Generación de Leads AI - Generación de Leads Más Inteligente con IA y Estrategia',
-      description: 'Transforma tu negocio con generación de leads impulsada por IA. Obtén leads consistentes y de alta calidad con orientación de ventas impulsada por IA. Impulsado por IA, dirigido por humanos.',
-      keywords: 'generación de leads AI, outreach automatizado, orientación de ventas, conversión de leads, leads B2B, cold outreach'
+      title: 'DHS – Smart Outreach. Human-Centered.',
+      description: 'Transforma tus ventas B2B con generación de leads impulsada por IA. Obtén prospects calificados, outreach automatizado y orientación de ventas AI. Resultados garantizados en 30 días.',
+      keywords: 'generación de leads AI, automatización de ventas B2B, cold outreach, ventas AI, calificación de leads, automatización de prospects, inteligencia de ventas'
     }
   };
 

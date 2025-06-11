@@ -4,6 +4,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import SEOHead from './components/SEOHead';
 import Home from './pages/Home';
 import About from './pages/About';
 import Approach from './pages/Approach';
@@ -19,6 +20,7 @@ function App() {
     <Router>
       <LanguageProvider>
         <div className="App min-h-screen bg-white">
+          <SEOHead />
           <ScrollToTop />
           <Navigation />
           <Routes>
