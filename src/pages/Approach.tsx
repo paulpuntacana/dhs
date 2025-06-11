@@ -50,7 +50,7 @@ const Services: React.FC = () => {
         t('services.guidance.feature3'),
         t('services.guidance.feature4')
       ],
-      cta: t('services.guidance.cta'),
+      cta: language === 'nl' ? 'Niet alleen leads — maar ook de juiste woorden om ze binnen te halen.' : t('services.guidance.cta'),
       icon: Bot,
       color: 'purple'
     },
@@ -317,9 +317,9 @@ const Services: React.FC = () => {
       </section>
 
       {/* Timeline Services */}
-      <section className="py-20 bg-white">
+      <section className="pt-12 pb-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-12">
+          <div className="space-y-24">
             {services.map((service, index) => (
               <AnimatedSection
                 key={index}
@@ -379,12 +379,12 @@ const Services: React.FC = () => {
                   </div>
 
                   {/* Infographic side */}
-                  <div className="flex-shrink-0 w-full lg:w-auto flex justify-center">
+                  <div className="hidden lg:flex flex-shrink-0 w-full lg:w-auto justify-center">
                     <div className="relative group">
                       <img 
                         src={`/images/step${index + 1}.png`}
                         alt={service.title}
-                        className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                        className="w-80 h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
