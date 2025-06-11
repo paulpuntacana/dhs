@@ -25,37 +25,104 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      // Submit to Netlify Forms
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          'name': formData.name,
+          'email': formData.email,
+          'company': formData.company,
+          'message': formData.message
+        }).toString()
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Er is een fout opgetreden bij het versturen van het formulier. Probeer het opnieuw of neem direct contact op via paul@denhartogh.solutions');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const faqs = [
+  const faqSections = [
     {
-      question: 'How quickly can we see results?',
-      answer: 'Most clients see an increase in qualified leads within the first 30 days. Full optimization typically occurs within 60-90 days as our AI learns your ideal customer profile.'
+      title: t('contact.faq.strategy.title'),
+      faqs: [
+        {
+          question: t('contact.faq.strategy.q1.question'),
+          answer: t('contact.faq.strategy.q1.answer')
+        },
+        {
+          question: t('contact.faq.strategy.q2.question'),
+          answer: t('contact.faq.strategy.q2.answer')
+        },
+        {
+          question: t('contact.faq.strategy.q3.question'),
+          answer: t('contact.faq.strategy.q3.answer')
+        },
+        {
+          question: t('contact.faq.strategy.q4.question'),
+          answer: t('contact.faq.strategy.q4.answer')
+        },
+        {
+          question: t('contact.faq.strategy.q5.question'),
+          answer: t('contact.faq.strategy.q5.answer')
+        }
+      ]
     },
     {
-      question: 'Do we maintain control over our outreach?',
-      answer: 'Absolutely. You review and approve all campaigns before they go live. Our AI provides recommendations, but you always have the final say.'
+      title: t('contact.faq.approach.title'),
+      faqs: [
+        {
+          question: t('contact.faq.approach.q1.question'),
+          answer: t('contact.faq.approach.q1.answer')
+        },
+        {
+          question: t('contact.faq.approach.q2.question'),
+          answer: t('contact.faq.approach.q2.answer')
+        },
+        {
+          question: t('contact.faq.approach.q3.question'),
+          answer: t('contact.faq.approach.q3.answer')
+        },
+        {
+          question: t('contact.faq.approach.q4.question'),
+          answer: t('contact.faq.approach.q4.answer')
+        }
+      ]
     },
     {
-      question: 'What industries do you work with?',
-      answer: 'We work across all B2B industries, with particular expertise in technology, professional services, manufacturing, and consulting sectors.'
-    },
-    {
-      question: 'How does pricing work?',
-      answer: 'Our pricing is performance-based and scales with your business. We offer flexible packages based on lead volume and service requirements. Contact us for a customized quote.'
-    },
-    {
-      question: 'Is there a long-term contract required?',
-      answer: 'We offer both month-to-month and annual contracts. Many clients choose annual agreements for better pricing, but we\'re flexible based on your needs.'
-    },
-    {
-      question: 'How do you ensure data privacy and compliance?',
-      answer: 'We are fully GDPR compliant and follow strict data protection protocols. All client data is encrypted and stored securely, with regular security audits.'
+      title: t('contact.faq.business.title'),
+      faqs: [
+        {
+          question: t('contact.faq.business.q1.question'),
+          answer: t('contact.faq.business.q1.answer')
+        },
+        {
+          question: t('contact.faq.business.q2.question'),
+          answer: t('contact.faq.business.q2.answer')
+        },
+        {
+          question: t('contact.faq.business.q3.question'),
+          answer: t('contact.faq.business.q3.answer')
+        },
+        {
+          question: t('contact.faq.business.q4.question'),
+          answer: t('contact.faq.business.q4.answer')
+        },
+        {
+          question: t('contact.faq.business.q5.question'),
+          answer: t('contact.faq.business.q5.answer')
+        }
+      ]
     }
   ];
 
@@ -72,7 +139,7 @@ const Contact: React.FC = () => {
               {t('contact.subtitle')}
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your lead generation with AI-powered precision? Let's discuss your specific challenges and create a customized strategy for your business.
+              {t('contact.header.description')}
             </p>
           </AnimatedSection>
         </div>
@@ -87,8 +154,9 @@ const Contact: React.FC = () => {
               <div className="bg-white p-8 rounded-2xl shadow-xl">
                 {!isSubmitted ? (
                   <>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Start Your Strategy Session</h2>
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('contact.form.title')}</h2>
+                    <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST" data-netlify="true">
+                      <input type="hidden" name="form-name" value="contact" />
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                           {t('contact.form.name')} *
@@ -197,60 +265,49 @@ const Contact: React.FC = () => {
             <AnimatedSection animation="slideRight" delay={300}>
               <div className="space-y-8">
                 <div className="bg-blue-50 p-8 rounded-2xl">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">What to Expect</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.expectations.title')}</h3>
                   <div className="space-y-4">
                     <div className="flex items-start space-x-4">
                       <Clock className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-gray-900">Quick Response</h4>
-                        <p className="text-gray-600">We'll contact you within 24 hours to schedule your strategy session.</p>
+                        <h4 className="font-semibold text-gray-900">{t('contact.expectations.response.title')}</h4>
+                        <p className="text-gray-600">{t('contact.expectations.response.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <MessageCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-gray-900">Strategy Discussion</h4>
-                        <p className="text-gray-600">60-minute deep dive into your current challenges and growth goals.</p>
+                        <h4 className="font-semibold text-gray-900">{t('contact.expectations.discussion.title')}</h4>
+                        <p className="text-gray-600">{t('contact.expectations.discussion.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-gray-900">Custom Proposal</h4>
-                        <p className="text-gray-600">Tailored solution with clear steps, timeline, and expected outcomes.</p>
+                        <h4 className="font-semibold text-gray-900">{t('contact.expectations.proposal.title')}</h4>
+                        <p className="text-gray-600">{t('contact.expectations.proposal.description')}</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-white p-8 rounded-2xl shadow-lg">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Direct Contact</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.direct.title')}</h3>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-4">
                       <Mail className="h-6 w-6 text-blue-600" />
                       <div>
-                        <p className="font-medium text-gray-900">Email</p>
-                        <p className="text-gray-600">contact@aileadgeneration.com</p>
+                        <p className="font-medium text-gray-900">{t('contact.direct.email.title')}</p>
+                        <p className="text-gray-600">info@denhartogh.solutions</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
                       <Clock className="h-6 w-6 text-blue-600" />
                       <div>
-                        <p className="font-medium text-gray-900">Response Time</p>
-                        <p className="text-gray-600">Within 24 hours on business days</p>
+                        <p className="font-medium text-gray-900">{t('contact.direct.response.title')}</p>
+                        <p className="text-gray-600">{t('contact.direct.response.description')}</p>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-2xl text-white">
-                  <h3 className="text-xl font-bold mb-4">Ready to Get Started?</h3>
-                  <p className="text-blue-100 mb-4">
-                    Join 500+ businesses already growing with our AI-powered lead generation system.
-                  </p>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-5 w-5 text-blue-300" />
-                    <span className="text-sm">No long-term contracts required</span>
                   </div>
                 </div>
               </div>
@@ -259,9 +316,27 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
+      {/* Ready to Get Started Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimatedSection animation="slideUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              {t('contact.cta.title')}
+            </h2>
+            <p className="text-xl text-blue-100 mb-6">
+              {t('contact.cta.description')}
+            </p>
+            <div className="flex items-center justify-center space-x-2">
+              <CheckCircle className="h-5 w-5 text-blue-300" />
+              <span className="text-blue-100">{t('contact.cta.subtitle')}</span>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection animation="slideUp" className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {t('contact.faq.title')}
@@ -271,25 +346,38 @@ const Contact: React.FC = () => {
             </p>
           </AnimatedSection>
 
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
+          <div className="space-y-12">
+            {faqSections.map((section, sectionIndex) => (
               <AnimatedSection
-                key={index}
+                key={sectionIndex}
                 animation="slideUp"
-                delay={index * 50}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                delay={sectionIndex * 100}
               >
-                <div className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <HelpCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                        {faq.question}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                    {section.title}
+                  </h3>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {section.faqs.map((faq, index) => (
+                      <div
+                        key={index}
+                        className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full"
+                      >
+                        <div className="p-6 h-full flex flex-col">
+                          <div className="flex items-start space-x-4 flex-1">
+                            <HelpCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                            <div className="flex-1">
+                              <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                                {faq.question}
+                              </h4>
+                              <p className="text-gray-600 leading-relaxed">
+                                {faq.answer}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </AnimatedSection>

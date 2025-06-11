@@ -81,7 +81,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-white">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-white pt-20 lg:pt-0">
         {/* TOP Moderne 2024 SaaS-achtergrond */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           {/* Animated dot grid pattern */}
@@ -144,47 +144,48 @@ const Home: React.FC = () => {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
-            {/* Glassmorphism floating card - alleen achter content */}
-            <div className="absolute left-[-8%] top-[50%] transform -translate-y-1/2 w-[113%] h-[120%] bg-white/15 backdrop-blur-sm rounded-3xl shadow-xl z-0" style={{ animation: 'smoothBlurFloat 15s ease-in-out infinite' }}></div>
+            {/* Glassmorphism floating card - alleen achter content, alleen op desktop */}
+            <div className="hidden lg:block absolute left-[-8%] top-[50%] transform -translate-y-1/2 w-[113%] h-[120%] bg-white/15 backdrop-blur-sm rounded-3xl shadow-xl z-0" style={{ animation: 'smoothBlurFloat 15s ease-in-out infinite' }}></div>
             
             <div className="text-center lg:text-left relative z-10">
-          <AnimatedSection animation="fadeIn">
+              <AnimatedSection animation="fadeIn">
                 <h1 className="text-4xl md:text-6xl font-bold text-[#1B365D] mb-6">
                   {t('home.hero.title')}
-            </h1>
+                </h1>
                 <p className="text-xl md:text-2xl text-[#1B365D] font-semibold mb-8">
-              {t('home.hero.subtitle')}
-            </p>
-          </AnimatedSection>
+                  {t('home.hero.subtitle')}
+                </p>
+              </AnimatedSection>
 
-          <AnimatedSection animation="slideUp" delay={300}>
+              <AnimatedSection animation="slideUp" delay={300}>
                 <p className="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed">
-              {t('home.hero.description')}
-            </p>
-          </AnimatedSection>
+                  {t('home.hero.description')}
+                </p>
+              </AnimatedSection>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-          <AnimatedSection animation="scale" delay={600}>
-            <Link
-              to="/contact"
+                <AnimatedSection animation="scale" delay={600}>
+                  <Link
+                    to="/contact"
                     className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-2xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group"
-            >
-              {t('home.hero.cta')}
-              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-            </Link>
-          </AnimatedSection>
-          
-          <AnimatedSection animation="scale" delay={700}>
-            <Link
-              to="/approach"
-              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-[#1B365D] bg-blue-50 rounded-2xl hover:bg-blue-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              {t('nav.approach')}
-            </Link>
-          </AnimatedSection>
-        </div>
-                  </div>
+                  >
+                    {t('home.hero.cta')}
+                    <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                  </Link>
+                </AnimatedSection>
+                
+                <AnimatedSection animation="scale" delay={700}>
+                  <Link
+                    to="/approach"
+                    className="inline-flex items-center px-8 py-4 text-lg font-semibold text-[#1B365D] bg-blue-50 rounded-2xl hover:bg-blue-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    {t('nav.approach')}
+                  </Link>
+                </AnimatedSection>
+              </div>
+            </div>
 
+            {/* Desktop hero image - rechts naast tekst */}
             <AnimatedSection animation="slideUp" delay={400} className="hidden lg:block">
               <div className="relative">
                 <img 
@@ -192,8 +193,22 @@ const Home: React.FC = () => {
                   alt="AI-Powered Lead Generation" 
                   className="relative w-full h-auto opacity-80"
                 />
-                </div>
-              </AnimatedSection>
+              </div>
+            </AnimatedSection>
+          </div>
+          
+          {/* Mobile hero image - shown below CTA buttons, inside hero section */}
+          <div className="lg:hidden mt-12">
+            <AnimatedSection animation="slideUp" delay={800} className="text-center px-4">
+              <div className="relative max-w-sm mx-auto">
+                <img 
+                  src="/images/hero-banner.png" 
+                  alt="AI-Powered Lead Generation" 
+                  className="w-full h-auto opacity-85 rounded-xl shadow-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent rounded-xl"></div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

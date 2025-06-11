@@ -19,13 +19,13 @@ const Footer: React.FC = () => {
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">{t('footer.tagline')}</p>
             <div className="flex space-x-4 mt-6">
-              <a href="#" aria-label="LinkedIn" className="hover:text-blue-400 transition-colors duration-200">
+              <a href="https://www.linkedin.com/company/dhs-nl/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-blue-400 transition-colors duration-200">
                 <Linkedin className="h-7 w-7" />
               </a>
-              <a href="#" aria-label="YouTube" className="hover:text-red-500 transition-colors duration-200">
+              <a href="https://www.youtube.com/@dsh_rd" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-red-500 transition-colors duration-200">
                 <Youtube className="h-7 w-7" />
               </a>
-              <a href="#" aria-label="Instagram" className="hover:text-pink-400 transition-colors duration-200">
+              <a href="https://www.instagram.com/dhs.rd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-pink-400 transition-colors duration-200">
                 <Instagram className="h-7 w-7" />
               </a>
             </div>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Den Hartogh Solutions. All rights reserved.
+              © 2025 Den Hartogh Solutions. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">

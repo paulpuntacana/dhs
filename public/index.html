@@ -3,16 +3,109 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
     <meta name="theme-color" content="#104ee3" />
-    <meta
-      name="description"
-      content="AI Lead Generation - Intelligent lead generation powered by AI, driven by humans"
-    />
-    <title>AI Lead Generation - DHS</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Primary Meta Tags -->
+    <title>AI Lead Generation - DHS | AI-Powered B2B Lead Generation & Sales Automation</title>
+    <meta name="title" content="AI Lead Generation - DHS | AI-Powered B2B Lead Generation & Sales Automation" />
+    <meta name="description" content="Transform your B2B sales with AI-powered lead generation. Get qualified prospects, automated outreach, and AI sales guidance. 30-day results guaranteed." />
+    <meta name="keywords" content="AI lead generation, B2B sales automation, cold outreach, sales AI, lead qualification, prospect automation, sales intelligence" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Den Hartogh Solutions" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://denhartogh.solutions/" />
+    <meta property="og:title" content="AI Lead Generation - DHS | AI-Powered B2B Lead Generation & Sales Automation" />
+    <meta property="og:description" content="Transform your B2B sales with AI-powered lead generation. Get qualified prospects, automated outreach, and AI sales guidance. 30-day results guaranteed." />
+    <meta property="og:image" content="https://denhartogh.solutions/images/og-image.jpg" />
+    <meta property="og:site_name" content="DHS - Den Hartogh Solutions" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://denhartogh.solutions/" />
+    <meta property="twitter:title" content="AI Lead Generation - DHS | AI-Powered B2B Lead Generation & Sales Automation" />
+    <meta property="twitter:description" content="Transform your B2B sales with AI-powered lead generation. Get qualified prospects, automated outreach, and AI sales guidance. 30-day results guaranteed." />
+    <meta property="twitter:image" content="https://denhartogh.solutions/images/og-image.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://denhartogh.solutions/" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Den Hartogh Solutions",
+      "alternateName": "DHS",
+      "url": "https://denhartogh.solutions",
+      "logo": "https://denhartogh.solutions/logo.png",
+      "description": "AI-powered B2B lead generation and sales automation services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kerkstraat 4B",
+        "addressLocality": "Velp",
+        "addressRegion": "Gelderland",
+        "postalCode": "6883 HT",
+        "addressCountry": "NL"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "",
+        "contactType": "customer service",
+        "email": "paul@denhartogh.solutions"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Paul Den Hartogh"
+      },
+      "foundingDate": "2024",
+      "sameAs": [
+        "https://www.linkedin.com/company/dhs-nl/",
+        "https://www.instagram.com/dhs.rd/",
+        "https://www.youtube.com/@dsh_rd"
+      ]
+    }
+    </script>
+    <style>
+      /* iOS Safari specific fixes */
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      /* Fix for mobile viewport height issues */
+      @media screen and (max-width: 1024px) {
+        .min-h-\5B 20rem\5D  {
+          min-height: 20rem !important;
+        }
+        .min-h-\5B 10rem\5D  {
+          min-height: 10rem !important;
+        }
+      }
+      
+      /* Fix for Safari mobile layout quirks */
+      @supports (-webkit-touch-callout: none) {
+        .lg\:h-80 {
+          height: auto !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
+    <!-- Netlify Forms discovery -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html> 

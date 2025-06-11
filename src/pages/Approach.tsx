@@ -210,7 +210,7 @@ const Services: React.FC = () => {
         nl: "Kennismaking & Doelgroepverkenning",
         en: "Introduction & Target Audience Exploration", 
         de: "Kennenlernen & Zielgruppenexploration",
-        es: "Introducción & Exploración de Audiencia"
+        es: "Introducción y Exploración de Audiencia"
       },
       description: {
         nl: "We starten met een kort gesprek waarin we je wensen, doelgroep en doelen helder krijgen.",
@@ -227,7 +227,7 @@ const Services: React.FC = () => {
         nl: "Onboarding & Strategieformulier",
         en: "Onboarding & Strategy Form",
         de: "Onboarding & Strategieformular", 
-        es: "Onboarding & Formulario de Estrategia"
+        es: "Onboarding y Formulario de Estrategia"
       },
       description: {
         nl: "Je ontvangt een slim opgesteld formulier waarmee wij alle info verzamelen om direct aan de slag te kunnen — zonder eindeloos heen en weer gemail.",
@@ -242,9 +242,9 @@ const Services: React.FC = () => {
       icon: Settings,
       title: {
         nl: "Technische Setup & Campagnevoorbereiding",
-        en: "Technical Setup & Campaign Preparation",
-        de: "Technisches Setup & Kampagnenvorbereitung",
-        es: "Configuración Técnica & Preparación de Campañas"
+        en: "Technical Setup & Campaign Preparation", 
+        de: "Technisches Setup & Kampagnenvorbereiding",
+        es: "Configuración Técnica y Preparación"
       },
       description: {
         nl: "We zetten je domeinen, inboxen, scripts en AI-systemen op. Jij hoeft niks te doen — wij regelen alles.",
@@ -278,7 +278,7 @@ const Services: React.FC = () => {
         nl: "Optimaliseren & Schalen",
         en: "Optimize & Scale",
         de: "Optimieren & Skalieren",
-        es: "Optimizar & Escalar"
+        es: "Optimizar y Escalar"
       },
       description: {
         nl: "We blijven verbeteren op basis van data. Wil je uitbreiden naar nieuwe doelgroepen of kanalen? We groeien met je mee.",
@@ -319,7 +319,7 @@ const Services: React.FC = () => {
       {/* Timeline Services */}
       <section className="pt-12 pb-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-24">
+          <div className="space-y-16 sm:space-y-20 lg:space-y-24">
             {services.map((service, index) => (
               <AnimatedSection
                 key={index}
@@ -328,22 +328,22 @@ const Services: React.FC = () => {
                 className="relative"
               >
                 {/* Horizontal service card */}
-                <div className={`flex flex-col lg:flex-row items-center gap-6 lg:gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                <div className={`flex flex-col lg:flex-row items-stretch lg:items-center gap-6 lg:gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   
                   {/* Content side */}
                   <div className="flex-1 w-full">
-                    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-80 flex flex-col">
+                    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 min-h-[20rem] lg:h-80 flex flex-col">
                       {/* Header */}
-                      <div className={`p-4 ${getColorClasses(service.color).bg} rounded-t-xl flex-shrink-0`}>
+                      <div className={`p-4 sm:p-6 ${getColorClasses(service.color).bg} rounded-t-xl flex-shrink-0`}>
                         <div className="flex items-center">
-                          <div className={`p-2 rounded-lg ${getColorClasses(service.color).text} bg-white mr-3`}>
-                            <service.icon className="h-6 w-6" />
+                          <div className={`p-2 rounded-lg ${getColorClasses(service.color).text} bg-white mr-3 flex-shrink-0`}>
+                            <service.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                           </div>
-                          <div>
+                          <div className="min-w-0 flex-1">
                             <span className={`text-xs font-bold ${getColorClasses(service.color).text} uppercase tracking-wide block`}>
                               {service.number}
                             </span>
-                            <h3 className="text-xl font-bold text-gray-900">
+                            <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-tight">
                               {service.title}
                             </h3>
                           </div>
@@ -351,9 +351,9 @@ const Services: React.FC = () => {
                       </div>
 
                       {/* Content */}
-                      <div className="p-4 flex-1 flex flex-col justify-between">
+                      <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         {/* Description */}
-                        <p className="text-gray-700 mb-4 leading-relaxed">
+                        <p className="text-gray-700 mb-4 leading-relaxed text-sm sm:text-base">
                           {service.description}
                         </p>
 
@@ -362,31 +362,30 @@ const Services: React.FC = () => {
                           {service.features.map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-start">
                               <CheckCircle className={`h-4 w-4 ${getColorClasses(service.color).text} mr-2 mt-0.5 flex-shrink-0`} />
-                              <span className="text-sm text-gray-700">{feature}</span>
+                              <span className="text-xs sm:text-sm text-gray-700 leading-relaxed">{feature}</span>
                             </div>
                           ))}
                         </div>
 
                         {/* CTA */}
                         <div className={`p-3 rounded-lg bg-gradient-to-r ${getColorClasses(service.color).bg} border ${getColorClasses(service.color).border} flex-shrink-0`}>
-                          <p className={`font-semibold ${getColorClasses(service.color).text} flex items-center text-sm`}>
-                            <span className="mr-2">👉</span>
-                            {service.cta}
+                          <p className={`font-semibold ${getColorClasses(service.color).text} flex items-start text-xs sm:text-sm leading-relaxed`}>
+                            <span className="mr-2 flex-shrink-0 mt-0.5">👉</span>
+                            <span>{service.cta}</span>
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Infographic side */}
+                  {/* Infographic side - completely hidden on mobile */}
                   <div className="hidden lg:flex flex-shrink-0 w-full lg:w-auto justify-center">
                     <div className="relative group">
                       <img 
                         src={`/images/step${index + 1}.png`}
                         alt={service.title}
-                        className="w-80 h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                        className="w-80 h-80 object-cover rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                   </div>
 
@@ -428,20 +427,20 @@ const Services: React.FC = () => {
       </section>
 
       {/* Human Control Section */}
-      <section className="py-12 bg-gradient-to-r from-[#104ee3]/20 to-[#104ee3]/10">
+      <section className="py-12 sm:py-16 lg:py-12 bg-gradient-to-r from-[#104ee3]/20 to-[#104ee3]/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <AnimatedSection animation="slideLeft">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                {language === 'nl' && "You're Always in Control"}
-                {language === 'en' && "You're Always in Control"}
-                {language === 'de' && "Du hast immer die Kontrolle"}
-                {language === 'es' && "Tú siempre tienes el control"}
-              </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                      <AnimatedSection animation="slideLeft">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900 leading-tight">
+              {language === 'nl' && "You're Always in Control"}
+              {language === 'en' && "You're Always in Control"}
+              {language === 'de' && "Du hast immer die Kontrolle"}
+              {language === 'es' && "Tú siempre tienes el control"}
+            </h2>
               
               {language === 'nl' && (
                 <>
-                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
                     Bij DHS gebruiken we AI om jouw koude acquisitie slimmer en efficiënter te maken — maar jij blijft altijd de eindbeslisser. Ons systeem ondersteunt jouw proces, het vervangt het niet.
                   </p>
                   <div className="space-y-3">
@@ -470,7 +469,7 @@ const Services: React.FC = () => {
 
               {language === 'en' && (
                 <>
-                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
                     At DHS, we use AI to make cold outreach smarter and more efficient — but you remain in charge. Our system supports your process, it doesn't replace it.
                   </p>
                   <div className="space-y-3">
@@ -499,7 +498,7 @@ const Services: React.FC = () => {
 
               {language === 'de' && (
                 <>
-                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
                     Bei DHS nutzen wir KI, um Kaltakquise intelligenter und effizienter zu gestalten – aber du triffst weiterhin alle Entscheidungen. Unser System unterstützt deinen Prozess, ersetzt ihn jedoch nicht.
                   </p>
                   <div className="space-y-3">
@@ -528,7 +527,7 @@ const Services: React.FC = () => {
 
               {language === 'es' && (
                 <>
-                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
                     En DHS usamos IA para hacer el outreach en frío más inteligente y eficiente, pero tú sigues teniendo el control. Nuestro sistema apoya tu proceso, no lo reemplaza.
                   </p>
                   <div className="space-y-3">
@@ -666,15 +665,15 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* Process Accordion Section */}
+      {/* Process Grid Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection animation="slideUp" className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {language === 'nl' && "Ons Proces – Van Kennismaking tot Resultaat"}
-              {language === 'en' && "Our Process – From Introduction to Results"}
-              {language === 'de' && "Unser Prozess – Von Kennenlernen bis Ergebnis"}
-              {language === 'es' && "Nuestro Proceso – De Conocerse a Resultados"}
+              {language === 'nl' && "Ons Proces"}
+              {language === 'en' && "Our Process"}
+              {language === 'de' && "Unser Prozess"}
+              {language === 'es' && "Nuestro Proceso"}
             </h2>
             <p className="text-xl text-gray-600">
               {language === 'nl' && "Een gestructureerde aanpak voor maximale effectiviteit"}
@@ -684,73 +683,75 @@ const Services: React.FC = () => {
             </p>
           </AnimatedSection>
 
-          {/* Horizontal Accordion */}
-          <div className="flex flex-col lg:flex-row gap-4 h-auto lg:h-80">
+          {/* Process Grid - like Home page style */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {processSteps.map((step, index) => {
               const colors = getColorClasses(step.color);
-              
-              // Specific hover classes for each color since Tailwind can't handle dynamic classes
-              const getHoverClasses = (color: string) => {
-                switch(color) {
-                  case 'blue': return 'group-hover:bg-blue-100';
-                  case 'green': return 'group-hover:bg-green-100';
-                  case 'purple': return 'group-hover:bg-purple-100';
-                  case 'orange': return 'group-hover:bg-orange-100';
-                  case 'red': return 'group-hover:bg-red-100';
-                  default: return 'group-hover:bg-blue-100';
-                }
-              };
-
-              const getIconHoverClasses = (color: string) => {
-                switch(color) {
-                  case 'blue': return 'group-hover:bg-blue-600';
-                  case 'green': return 'group-hover:bg-green-600';
-                  case 'purple': return 'group-hover:bg-purple-600';
-                  case 'orange': return 'group-hover:bg-orange-600';
-                  case 'red': return 'group-hover:bg-red-600';
-                  default: return 'group-hover:bg-blue-600';
-                }
-              };
               
               return (
                 <AnimatedSection
                   key={step.id}
                   animation="slideUp"
-                  delay={index * 100}
-                  className="flex-1 group"
+                  delay={index * 150}
+                  className="relative"
                 >
-                  <div 
-                    className={`rounded-xl shadow-lg transition-all duration-500 overflow-hidden cursor-pointer h-full bg-white ${getHoverClasses(step.color)} group-hover:flex-[3] group-hover:shadow-xl hover:ring-2 hover:ring-blue-500`}
-                  >
-                    <div className="p-4 h-full flex flex-col justify-between">
-                      {/* Header - Always visible */}
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="flex items-center space-x-3">
-                          <div className={`flex items-center justify-center w-10 h-10 ${colors.bg} ${colors.text} rounded-full transition-colors duration-300 ${getIconHoverClasses(step.color)} group-hover:text-white`}>
-                            <step.icon className="h-5 w-5" />
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <span className={`text-xs font-semibold ${colors.text} uppercase tracking-wide`}>
-                              {language === 'nl' ? 'Stap' : language === 'en' ? 'Step' : language === 'de' ? 'Schritt' : 'Paso'} {step.id}
-                            </span>
-                            <ChevronDown className={`h-4 w-4 text-gray-400 lg:rotate-90 transition-transform duration-300 group-hover:lg:rotate-180`} />
-                          </div>
-                        </div>
-                      </div>
+                  <div className={`p-4 lg:p-6 rounded-2xl transition-all duration-300 hover:scale-105 group text-center h-[200px] lg:h-[340px] flex flex-col shadow-lg hover:shadow-xl ${
+                    step.color === 'blue' ? 'bg-blue-50 hover:bg-blue-100' :
+                    step.color === 'green' ? 'bg-green-50 hover:bg-green-100' :
+                    step.color === 'purple' ? 'bg-purple-50 hover:bg-purple-100' :
+                    step.color === 'orange' ? 'bg-orange-50 hover:bg-orange-100' :
+                    'bg-red-50 hover:bg-red-100'
+                  }`}>
+                    {/* Step label */}
+                    <div className="text-center mb-2 lg:mb-4 mt-1 lg:mt-2">
+                      <span className={`text-xs font-semibold uppercase tracking-wide ${
+                        step.color === 'blue' ? 'text-blue-600' :
+                        step.color === 'green' ? 'text-green-600' :
+                        step.color === 'purple' ? 'text-purple-600' :
+                        step.color === 'orange' ? 'text-orange-600' :
+                        'text-red-600'
+                      }`}>
+                        {language === 'nl' ? 'Stap' : language === 'en' ? 'Step' : language === 'de' ? 'Schritt' : 'Paso'} {step.id}
+                      </span>
+                    </div>
 
-                      {/* Title - Always visible */}
-                      <h3 className={`text-sm font-semibold ${colors.text} uppercase tracking-wide mb-3 transition-colors duration-300`}>
+                    {/* Icon - responsive size */}
+                    <div className="flex items-center justify-center h-10 w-10 lg:h-16 lg:w-16 mx-auto mb-2 lg:mb-4">
+                      <step.icon className={`h-10 w-10 lg:h-16 lg:w-16 flex-shrink-0 group-hover:scale-110 transition-transform duration-200 ${
+                        step.color === 'blue' ? 'text-blue-500' :
+                        step.color === 'green' ? 'text-green-500' :
+                        step.color === 'purple' ? 'text-purple-500' :
+                        step.color === 'orange' ? 'text-orange-500' :
+                        'text-red-500'
+                      }`} />
+                    </div>
+
+                    {/* Title - responsive */}
+                    <div className="h-8 lg:h-14 flex items-center justify-center mb-2 lg:mb-4 px-2">
+                      <h3 className="text-sm lg:text-lg font-bold text-gray-900 leading-tight text-center">
                         {step.title[language]}
                       </h3>
+                    </div>
 
-                      {/* Content - Always visible */}
-                      <div className="flex-1">
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {step.description[language]}
-                        </p>
-                      </div>
+                    {/* Description - responsive */}
+                    <div className="mt-auto px-2 pb-1 lg:pb-2 flex-1 flex items-end">
+                      <p className="text-xs text-gray-600 leading-tight text-center w-full">
+                        {step.description[language]}
+                      </p>
                     </div>
                   </div>
+                  
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden lg:block absolute top-[170px] right-[-18px] transform -translate-y-1/2 z-10">
+                      <ArrowRight className={`h-6 w-6 ${
+                        step.color === 'blue' ? 'text-blue-400' :
+                        step.color === 'green' ? 'text-green-400' :
+                        step.color === 'purple' ? 'text-purple-400' :
+                        step.color === 'orange' ? 'text-orange-400' :
+                        'text-red-400'
+                      }`} />
+                    </div>
+                  )}
                 </AnimatedSection>
               );
             })}

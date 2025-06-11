@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://denhartogh.solutions/sitemap.xml
+
+# Block access to admin areas (if any in future)
+Disallow: /admin/
+Disallow: /.netlify/
+
+# Allow crawling of all content
+Allow: /approach
+Allow: /about  
+Allow: /contact 
