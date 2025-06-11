@@ -14,8 +14,7 @@ const translations: Record<string, Record<string, string>> = {
   en: {
     // Navigation
     'nav.home': 'Home',
-    'nav.services': 'Services',
-    'nav.solutions': 'Solutions',
+    'nav.approach': 'Approach',
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'nav.cta': "Let's talk strategy!",
@@ -80,21 +79,41 @@ const translations: Record<string, Record<string, string>> = {
     'home.testimonials.3.company': 'The FilmFactory',
     'home.testimonials.3.result': 'Targeted outreach',
     
-    // Services Page
-    'services.title': 'Our Services',
-    'services.subtitle': 'Four Core Solutions for Complete Lead Generation Success',
+          // Approach Page
+      'approach.title': 'Our Approach',
+      'approach.subtitle': 'Transforming businesses with AI-powered cold outreach and intelligent sales guidance. Consistent lead flow, better conversions.',
     
     'services.data.title': 'Data Collection & Enrichment',
-    'services.data.description': 'Advanced data analysis to target ideal audiences for cold outreach, providing high-quality, up-to-date leads with comprehensive enrichment.',
+    'services.data.description': 'We identify and collect highly relevant leads within your target audience, enriched with valuable company information. This way you always receive current, qualitative, and validated data, ready for outreach.',
+    'services.data.feature1': 'Smart scraping & data analysis',
+    'services.data.feature2': 'Real-time enrichment with industry, role, and company size',
+    'services.data.feature3': 'Validation and relevance scoring',
+    'services.data.feature4': '100% GDPR compliant',
+    'services.data.cta': 'We find your target audience. You focus on growth.',
     
     'services.outreach.title': 'Automated Cold Outreach',
-    'services.outreach.description': 'Personalized cold email campaigns that reach the right people consistently, filling your pipeline with qualified prospects on autopilot.',
+    'services.outreach.description': 'We build smart, personalized campaigns in your name — via email, fully automated. This ensures your propositions reach the right people at the right time.',
+    'services.outreach.feature1': 'Personal emails and follow-ups',
+    'services.outreach.feature2': 'Campaign management in Smartlead (or other platform)',
+    'services.outreach.feature3': 'Testing, optimizing, and scaling',
+    'services.outreach.feature4': 'Insights into opens, clicks, and replies',
+    'services.outreach.cta': 'No more manual work. Your first contact moment? Fully arranged.',
     
     'services.guidance.title': 'AI-Driven Sales Guidance',
-    'services.guidance.description': 'Real-time analysis and sales guidance to help you know exactly what to say and when during follow-up, moving leads through your pipeline effectively.',
+    'services.guidance.description': 'Every reply is automatically read and analyzed by AI. For each lead, you receive concrete follow-up advice, so you know exactly what to say and when — even without sales experience.',
+    'services.guidance.feature1': 'AI classification: HOT, WARM, COLD, NI',
+    'services.guidance.feature2': 'Personal follow-up advice per lead',
+    'services.guidance.feature3': 'Language recognition and multilingual output (NL, EN, DE, ES)',
+    'services.guidance.feature4': 'Continuously learning system based on your cases',
+    'services.guidance.cta': 'Not just leads — but also the right words to close them.',
     
     'services.conversion.title': 'Conversion & Closing Deals',
-    'services.conversion.description': 'Only warm leads are passed on, with actionable follow-up recommendations and AI guidance to close deals confidently.',
+    'services.conversion.description': 'You only receive interested leads with follow-up advice. This way you conduct targeted sales conversations and convert more — without the noise. We send reports. You close the deals.',
+    'services.conversion.feature1': 'Automatic lead notifications per client',
+    'services.conversion.feature2': 'Warm lead filtering',
+    'services.conversion.feature3': 'Deal tracking and reporting (optional)',
+    'services.conversion.feature4': 'Complete focus on conversion',
+    'services.conversion.cta': 'You do the closing — we handle everything before.',
     
     // Solutions Page
     'solutions.title': 'Solutions That Drive Results',
@@ -140,63 +159,72 @@ const translations: Record<string, Record<string, string>> = {
     'home.control.point2': 'Real collaboration with your strategy team — no black box AI',
     'home.control.point3': 'Every AI recommendation comes with context and clarity',
     'home.control.point4': 'You stay in full control of your sales flow — we support, not override',
-    // Footer tagline
-    'footer.tagline': 'Transforming businesses with AI-powered cold outreach and intelligent sales guidance. Consistent lead flow, better conversions.',
+    // Footer
+    'footer.quickLinks': 'Quick Links',
+    'footer.tagline': 'We transform businesses with AI-powered cold outreach and intelligent sales guidance. Consistent lead flow, better conversions.',
+    // Approach Page CTA
+    'approach.cta.title': 'Ready to Solve Your Lead Generation Challenges?',
+    'approach.cta.subtitle': 'Let\'s discuss how our proven solutions can address your specific pain points and drive measurable results.',
+    'approach.cta.button': 'Get Your Strategy Session',
+    // Approach Page Challenges Section
+    'approach.challenges.title': 'Common Challenges We Solve',
+    'approach.challenges.subtitle': 'Real problems with proven solutions and measurable results.',
   },
   nl: {
-    // Navigation
-    'nav.home': 'Home',
-    'nav.services': 'Diensten',
-    'nav.solutions': 'Oplossingen',
-    'nav.about': 'Over Ons',
-    'nav.contact': 'Contact',
+          // Navigation
+      'nav.home': 'Home',
+      'nav.approach': 'Aanpak',
+      'nav.about': 'Over Ons',
+      'nav.contact': 'Contact',
     'nav.cta': 'Laten we praten!',
     
     // Home Page
-    'home.hero.title': 'AI Lead Generatie',
-    'home.hero.subtitle': 'Slimmere Lead Generatie – Aangedreven door AI, Gedreven door Mensen',
-    'home.hero.description': 'Vul je pipeline consistent met hoogwaardige leads door AI-aangedreven cold outreach. Ons intelligente systeem begeleidt je follow-up om prospects om te zetten in klanten.',
-    'home.hero.cta': 'Boek Je Strategie Sessie',
+    'home.hero.title': 'AI Leadgeneratie',
+    'home.hero.subtitle': 'Slimmere leadgeneratie – Aangedreven door AI, gestuurd door mensen',
+    'home.hero.description': 'Vul je sales-pipeline consistent met hoogwaardige leads via AI-gedreven cold outreach. Ons slimme systeem ondersteunt je opvolging en helpt je om geïnteresseerde prospects om te zetten in klanten.',
+    'home.hero.cta': 'Boek je strategiegesprek',
     
-    'home.pain.title': 'Worstelt U Met...',
-    'home.pain.subtitle': 'Veelvoorkomende uitdagingen die onze AI-oplossing helpt overwinnen',
-    'home.pain.prospect': 'Moeite met het vinden van de juiste prospects?',
-    'home.pain.flow': 'Inconsistente lead-stroom?',
-    'home.pain.outreach': 'Ineffectieve cold outreach?',
-    'home.pain.followup': 'Deals verliezen door slechte follow-up?',
-    'home.pain.timing': 'Te laat reageren of met de verkeerde boodschap?',
-    'home.pain.calls': 'Onvoorbereid voor ontdekkingsgesprekken?',
+    'home.pain.title': 'Loop je ook hier tegenan?',
+    'home.pain.subtitle': 'Veelvoorkomende uitdagingen die we helpen oplossen',
+    'home.pain.prospect': 'Moeite om de juiste prospects te vinden?',
+    'home.pain.flow': 'Een onregelmatige stroom van nieuwe leads?',
+    'home.pain.outreach': 'Cold outreach die weinig oplevert?',
+    'home.pain.followup': 'Misgelopen deals door gebrekkige opvolging?',
+    'home.pain.timing': 'Te laat of met de verkeerde boodschap reageren?',
+    'home.pain.calls': 'Onvoorbereid zijn op kennismakingsgesprekken?',
     
-    'home.solution.title': 'Onze AI-Aangedreven Cold Outreach Oplossing',
+    'home.solution.title': 'AI-gedreven leadgeneratie',
     'home.solution.description': 'We combineren geavanceerde AI-technologie met bewezen cold outreach strategieën om je pipeline consistent te vullen en je te begeleiden om meer deals te sluiten.',
     'home.solution.powered': 'Aangedreven door AI',
     'home.solution.driven': 'Gestuurd door Mensen',
     'home.solution.control': 'U Houdt Altijd Het Stuur Vast',
     
     // Home Page Process Steps
-    'home.process.1.title': 'Targeten & Verzamelen',
-    'home.process.1.desc': 'AI identificeert en verrijkt je ideale prospects met precieze data',
+    'home.process.title': 'Hoe werkt ons cold outreach-proces?',
+    'home.process.subtitle': 'Een gestructureerde aanpak om je pipeline te vullen en klanten binnen te halen',
+    'home.process.1.title': 'Targeting & Dataverrijking',
+    'home.process.1.desc': 'Onze AI selecteert en verrijkt automatisch de juiste prospects.',
     'home.process.2.title': 'Cold Outreach',
-    'home.process.2.desc': 'Geautomatiseerde gepersonaliseerde campagnes vullen je pipeline consistent',
-    'home.process.3.title': 'AI-begeleiding',
-    'home.process.3.desc': 'Inzichten in real-time sturen je follow-up voor maximale conversie',
-    'home.process.4.title': 'Deals Sluiten',
-    'home.process.4.desc': 'Zet warme leads om in klanten met strategische begeleiding',
-    'home.stats.1.label': 'Bedrijven geholpen',
-    'home.stats.2.label': 'Verbetering leadkwaliteit',
-    'home.stats.3.label': 'Pipelinegroei',
-    'home.stats.4.label': 'AI-systeem monitoring',
+    'home.process.2.desc': 'Geautomatiseerde, gepersonaliseerde campagnes zorgen voor een constante instroom van leads.',
+    'home.process.3.title': 'AI-ondersteunde opvolging',
+    'home.process.3.desc': 'Realtime inzichten helpen je slimmer opvolgen en beter converteren.',
+    'home.process.4.title': 'Deals sluiten',
+    'home.process.4.desc': 'Zet warme leads om in klanten met gerichte salesbegeleiding.',
+    'home.stats.1.label': 'bedrijven geholpen',
+    'home.stats.2.label': 'hogere leadkwaliteit',
+    'home.stats.3.label': 'snellere pipelinegroei',
+    'home.stats.4.label': 'AI-monitoring en ondersteuning',
     'home.learnMore': 'Meer informatie',
     
     // Home Page Headings & Subtitles
     'home.control.title': 'U Houdt Altijd Het Stuur Vast',
     'home.control.subtitle': 'Onze technologie ondersteunt uw beslissingen — niet vervangt ze. U leidt het proces, wij leveren de kracht.',
-    'home.stats.title': 'Bewezen Resultaten in Cijfers',
-    'home.stats.subtitle': 'Onze AI-aangedreven cold outreach levert consistente, meetbare groei',
-    'home.cta.title': 'Klaar om uw pipeline te vullen met kwalitatieve leads?',
-    'home.cta.subtitle': 'Sluit u aan bij 500+ bedrijven die al groeien met ons AI-aangedreven cold outreach en sales begeleiding.',
-    'home.testimonials.title': 'Wat Onze Klanten Zeggen',
-    'home.testimonials.subtitle': 'Lees hoe bedrijven hun leadgeneratie en salesproces hebben getransformeerd',
+    'home.stats.title': 'Bewezen resultaten in cijfers',
+    'home.stats.subtitle': 'Onze aanpak levert structurele en meetbare groei op',
+    'home.cta.title': 'Klaar om jouw pipeline te vullen met kwalitatieve leads?',
+    'home.cta.subtitle': 'Sluit je aan bij 20+ bedrijven die groeien dankzij onze AI-gedreven outreach en salesbegeleiding.',
+    'home.testimonials.title': 'Wat klanten over ons zeggen',
+    'home.testimonials.subtitle': 'Hoe wij leadgeneratie en salesprocessen transformeren',
     'home.testimonials.1.quote': 'Ik had geen idee hoe ik cold outreach moest aanpakken. Paul hielp me effectief potentiële klanten te bereiken.',
     'home.testimonials.1.name': 'Ravi Ramnarain',
     'home.testimonials.1.company': 'Solvitec',
@@ -210,21 +238,41 @@ const translations: Record<string, Record<string, string>> = {
     'home.testimonials.3.company': 'The FilmFactory',
     'home.testimonials.3.result': 'Gerichte outreach',
     
-    // Services Page
-    'services.title': 'Onze Diensten',
-    'services.subtitle': 'Vier Kerndiensten voor Volledig Lead Generatie Succes',
+          // Approach Page
+      'approach.title': 'Onze Aanpak',
+      'approach.subtitle': 'Bedrijven transformeren met AI-aangedreven koude acquisitie en intelligente salesbegeleiding. Consistente leadflow, betere conversies.',
     
-    'services.data.title': 'Data Verzameling & Verrijking',
-    'services.data.description': 'Geavanceerde data-analyse om ideale doelgroepen te targeten voor cold outreach, met hoogwaardige, actuele leads en uitgebreide verrijking.',
+    'services.data.title': 'Data Collection & Enrichment',
+    'services.data.description': 'We identificeren en verzamelen hyperrelevante leads binnen jouw doelgroep, verrijkt met waardevolle bedrijfsinformatie. Zo ontvang je altijd actuele, kwalitatieve en gevalideerde data, klaar voor outreach.',
+    'services.data.feature1': 'Slimme scraping & data-analyse',
+    'services.data.feature2': 'Realtime verrijking met o.a. branche, rol en bedrijfsgrootte',
+    'services.data.feature3': 'Validatie en scoring op relevantie',
+    'services.data.feature4': '100% AVG-conform',
+    'services.data.cta': 'Wij zoeken jouw doelgroep. Jij focust op groei.',
     
-    'services.outreach.title': 'Geautomatiseerde Cold Outreach',
-    'services.outreach.description': 'Gepersonaliseerde cold email campagnes die de juiste mensen consistent bereiken, je pipeline vullen met gekwalificeerde prospects op autopilot.',
+    'services.outreach.title': 'Automated Cold Outreach',
+    'services.outreach.description': 'We bouwen slimme, gepersonaliseerde campagnes op jouw naam — via e-mail, volledig geautomatiseerd. Daardoor belanden jouw proposities bij de juiste mensen, op het juiste moment.',
+    'services.outreach.feature1': 'Persoonlijke e-mails en follow-ups',
+    'services.outreach.feature2': 'Campagnebeheer in Smartlead (of ander platform)',
+    'services.outreach.feature3': 'Testen, optimaliseren en schalen',
+    'services.outreach.feature4': 'Inzicht in opens, clicks en replies',
+    'services.outreach.cta': 'Geen handwerk meer. Jouw eerste contactmoment? Volledig geregeld.',
     
-    'services.guidance.title': 'AI-Gestuurde Sales Begeleiding',
-    'services.guidance.description': 'Real-time analyse en sales begeleiding om precies te weten wat en wanneer te zeggen tijdens follow-up, leads effectief door je pipeline te bewegen.',
+    'services.guidance.title': 'AI-Driven Sales Guidance',
+    'services.guidance.description': 'Elke reply wordt automatisch gelezen en geanalyseerd door AI. Per lead ontvang jij een concreet opvolgadvies, zodat je precies weet wat te zeggen en wanneer — ook zonder saleservaring.',
+    'services.guidance.feature1': 'AI-classificatie: HOT, WARM, COLD, NI',
+    'services.guidance.feature2': 'Persoonlijk opvolgadvies per lead',
+    'services.guidance.feature3': 'Taalherkenning en meertalige output (NL, EN, DE, ES)',
+    'services.guidance.feature4': 'Continu lerend systeem gebaseerd op jouw cases',
+    'services.guidance.cta': 'Niet alleen leads — maar ook de juiste woorden om ze binnen te halen.',
     
-    'services.conversion.title': 'Conversie & Deals Sluiten',
-    'services.conversion.description': 'Alleen warme leads worden doorgegeven, met uitvoerbare follow-up aanbevelingen en AI-begeleiding om vol vertrouwen deals te sluiten.',
+    'services.conversion.title': 'Conversion & Closing Deals',
+    'services.conversion.description': 'Je ontvangt alleen geïnteresseerde leads met opvolgadvies. Zo voer je gerichte salesgesprekken en converteer je meer — zonder de ruis. Wij sturen rapportages. Jij sluit de deals.',
+    'services.conversion.feature1': 'Automatische leadnotificaties per klant',
+    'services.conversion.feature2': 'Warm lead filtering',
+    'services.conversion.feature3': 'Dealtracking en rapportage (optioneel)',
+    'services.conversion.feature4': 'Volledige focus op conversie',
+    'services.conversion.cta': 'Jij doet de closing — wij zorgen voor alles ervoor.',
     
     // Solutions Page
     'solutions.title': 'Oplossingen Die Resultaten Opleveren',
@@ -259,24 +307,25 @@ const translations: Record<string, Record<string, string>> = {
     'common.getStarted': 'Aan de Slag',
     'common.contact': 'Contact Opnemen',
     
-    // Hero
-    'home.hero.title': 'AI Lead Generatie',
-    'home.hero.subtitle': 'Slimmere Lead Generatie – Aangedreven door AI, Gedreven door Mensen',
-    // Process uitleg
-    'home.process.title': 'Hoe Werkt Ons Cold Outreach Proces',
-    'home.process.subtitle': 'Een systematische aanpak om je pipeline te vullen met gekwalificeerde leads en ze om te zetten in klanten',
     // Control points
     'home.control.point1': 'Campagnes gaan alleen live met jouw goedkeuring',
     'home.control.point2': 'Echte samenwerking met je strategie team — geen black box AI',
     'home.control.point3': 'Elke AI-aanbeveling komt met context en duidelijkheid',
     'home.control.point4': 'Jij houdt altijd de controle over je sales flow — wij ondersteunen, niet overnemen',
+    'footer.quickLinks': 'Quick Links',
     'footer.tagline': 'Wij transformeren bedrijven met AI-aangedreven cold outreach en intelligente sales begeleiding. Consistente leadstroom, betere conversies.',
+    // Approach Page CTA
+    'approach.cta.title': 'Ready to Solve Your Lead Generation Challenges?',
+    'approach.cta.subtitle': 'Let\'s discuss how our proven solutions can address your specific pain points and drive measurable results.',
+    'approach.cta.button': 'Get Your Strategy Session',
+    // Approach Page Challenges Section
+    'approach.challenges.title': 'Common Challenges We Solve',
+    'approach.challenges.subtitle': 'Real problems with proven solutions and measurable results.',
   },
   de: {
     // Navigation
     'nav.home': 'Startseite',
-    'nav.services': 'Dienstleistungen',
-    'nav.solutions': 'Lösungen',
+    'nav.approach': 'Ansatz',
     'nav.about': 'Über Uns',
     'nav.contact': 'Kontakt',
     'nav.cta': 'Kontakt',
@@ -339,21 +388,41 @@ const translations: Record<string, Record<string, string>> = {
     'home.testimonials.3.company': 'The FilmFactory',
     'home.testimonials.3.result': 'Gezielte Outreach',
     
-    // Services Page
-    'services.title': 'Unsere Dienstleistungen',
-    'services.subtitle': 'Vier Kernlösungen für Vollständigen Lead-Generierungs-Erfolg',
+          // Approach Page
+      'approach.title': 'Unser Ansatz',
+      'approach.subtitle': 'Unternehmen mit KI-gestützter Kaltakquise und intelligenter Vertriebsbegleitung transformieren. Konsistenter Leadfluss, bessere Konversionen.',
     
     'services.data.title': 'Datensammlung & -anreicherung',
-    'services.data.description': 'Erweiterte Datenanalyse zur Zielgruppenansprache für Cold Outreach, hochwertige, aktuelle Leads mit umfassender Anreicherung.',
+    'services.data.description': 'Wir identifizieren und sammeln hochrelevante Leads innerhalb Ihrer Zielgruppe, angereichert mit wertvollen Unternehmensinformationen. So erhalten Sie immer aktuelle, qualitative und validierte Daten, bereit für Outreach.',
+    'services.data.feature1': 'Intelligentes Scraping & Datenanalyse',
+    'services.data.feature2': 'Echtzeit-Anreicherung mit Branche, Rolle und Unternehmensgröße',
+    'services.data.feature3': 'Validierung und Relevanz-Scoring',
+    'services.data.feature4': '100% DSGVO-konform',
+    'services.data.cta': 'Wir finden Ihre Zielgruppe. Sie fokussieren sich auf Wachstum.',
     
     'services.outreach.title': 'Automatisierte Cold Outreach',
-    'services.outreach.description': 'Personalisierte Cold Email Kampagnen, die die richtigen Personen konsistent erreichen und Ihre Pipeline mit qualifizierten Prospects auf Autopilot füllen.',
+    'services.outreach.description': 'Wir erstellen intelligente, personalisierte Kampagnen in Ihrem Namen — per E-Mail, vollständig automatisiert. Dadurch erreichen Ihre Angebote die richtigen Personen zum richtigen Zeitpunkt.',
+    'services.outreach.feature1': 'Persönliche E-Mails und Follow-ups',
+    'services.outreach.feature2': 'Kampagnen-Management in Smartlead (oder andere Plattform)',
+    'services.outreach.feature3': 'Testen, optimieren und skalieren',
+    'services.outreach.feature4': 'Einblicke in Öffnungen, Klicks und Antworten',
+    'services.outreach.cta': 'Keine Handarbeit mehr. Ihr erster Kontakt? Vollständig geregelt.',
     
     'services.guidance.title': 'KI-Gesteuerte Verkaufsberatung',
-    'services.guidance.description': 'Echtzeit-Analyse und Verkaufsberatung, um genau zu wissen, was und wann während der Nachfassung zu sagen ist, Leads effektiv durch Ihre Pipeline zu bewegen.',
+    'services.guidance.description': 'Jede Antwort wird automatisch von KI gelesen und analysiert. Pro Lead erhalten Sie konkrete Nachfass-Empfehlungen, sodass Sie genau wissen, was und wann zu sagen ist — auch ohne Verkaufserfahrung.',
+    'services.guidance.feature1': 'KI-Klassifizierung: HOT, WARM, COLD, NI',
+    'services.guidance.feature2': 'Persönliche Nachfass-Empfehlungen pro Lead',
+    'services.guidance.feature3': 'Spracherkennung und mehrsprachige Ausgabe (NL, EN, DE, ES)',
+    'services.guidance.feature4': 'Kontinuierlich lernendes System basierend auf Ihren Fällen',
+    'services.guidance.cta': 'Nicht nur Leads — sondern auch die richtigen Worte, um sie zu gewinnen.',
     
     'services.conversion.title': 'Konversion & Deal-Abschluss',
-    'services.conversion.description': 'Nur warme Leads werden weitergegeben, mit umsetzbaren Nachfass-Empfehlungen und KI-Anleitung für selbstbewusste Deal-Abschlüsse.',
+    'services.conversion.description': 'Sie erhalten nur interessierte Leads mit Nachfass-Empfehlungen. So führen Sie gezielte Verkaufsgespräche und konvertieren mehr — ohne das Rauschen. Wir senden Berichte. Sie schließen die Deals ab.',
+    'services.conversion.feature1': 'Automatische Lead-Benachrichtigungen pro Kunde',
+    'services.conversion.feature2': 'Warme Lead-Filterung',
+    'services.conversion.feature3': 'Deal-Tracking und Berichterstattung (optional)',
+    'services.conversion.feature4': 'Vollständiger Fokus auf Konversion',
+    'services.conversion.cta': 'Sie machen den Abschluss — wir kümmern uns um alles davor.',
     
     // Solutions Page
     'solutions.title': 'Lösungen Die Ergebnisse Liefern',
@@ -392,20 +461,27 @@ const translations: Record<string, Record<string, string>> = {
     'home.hero.title': 'AI Lead Generierung',
     'home.hero.subtitle': 'Intelligentere Lead-Generierung – Angetrieben von KI, Getrieben von Menschen',
     // Process uitleg
-    'home.process.title': 'Wie Unser Cold Outreach Prozess Funktioniert',
-    'home.process.subtitle': 'Ein systematischer Ansatz, um Ihre Pipeline mit qualifizierten Leads zu füllen und sie in Kunden zu verwandeln',
+    'home.process.title': 'Cómo Funciona Nuestro Proceso de Cold Outreach',
+    'home.process.subtitle': 'Un enfoque sistemático para llenar tu pipeline con leads calificados y convertirlos en clientes',
     // Control points
-    'home.control.point1': 'Kampagnen gehen nur mit Ihrer Zustimmung live',
-    'home.control.point2': 'Echte Zusammenarbeit mit Ihrem Strategie-Team — keine Black Box KI',
-    'home.control.point3': 'Jede KI-Empfehlung kommt mit Kontext und Klarheit',
-    'home.control.point4': 'Sie behalten die volle Kontrolle über Ihren Vertriebsprozess — wir unterstützen, nicht ersetzen',
-    'footer.tagline': 'Wir transformieren Unternehmen mit KI-gestütztem Cold Outreach und intelligenter Vertriebsberatung. Konsistenter Leadfluss, bessere Konversionen.',
+    'home.control.point1': 'Las campañas solo se lanzan con tu aprobación',
+    'home.control.point2': 'Colaboración real con tu equipo de estrategia — nada de IA como caja negra',
+    'home.control.point3': 'Cada recomendación de IA viene con contexto y claridad',
+    'home.control.point4': 'Siempre tienes el control total de tu flujo de ventas — nosotros apoyamos, no reemplazamos',
+    'footer.quickLinks': 'Quick Links',
+    'footer.tagline': 'Transformamos empresas con cold outreach impulsado por IA y orientación de ventas inteligente. Flujo de leads consistente, mejores conversiones.',
+    // Approach Page CTA
+    'approach.cta.title': 'Ready to Solve Your Lead Generation Challenges?',
+    'approach.cta.subtitle': 'Let\'s discuss how our proven solutions can address your specific pain points and drive measurable results.',
+    'approach.cta.button': 'Get Your Strategy Session',
+    // Approach Page Challenges Section
+    'approach.challenges.title': 'Common Challenges We Solve',
+    'approach.challenges.subtitle': 'Real problems with proven solutions and measurable results.',
   },
   es: {
     // Navigation
     'nav.home': 'Inicio',
-    'nav.services': 'Servicios',
-    'nav.solutions': 'Soluciones',
+    'nav.approach': 'Nuestro enfoque',
     'nav.about': 'Acerca de',
     'nav.contact': 'Contacto',
     'nav.cta': '¡Hablemos de estrategia!',
@@ -450,7 +526,7 @@ const translations: Record<string, Record<string, string>> = {
     'home.control.title': 'Siempre Tienes el Control',
     'home.control.subtitle': 'Nuestra tecnología apoya tus decisiones — no las reemplaza. Tú lideras el proceso, nosotros lo potenciamos.',
     'home.stats.title': 'Resultados Probados en Números',
-    'home.stats.subtitle': 'Nuestro cold outreach impulsado por IA ofrece un crecimiento consistente y medible',
+    'home.stats.subtitle': 'Un nuestro cold outreach impulsado por IA ofrece un crecimiento consistente y medible',
     'home.cta.title': '¿Listo para llenar tu pipeline con leads de calidad?',
     'home.cta.subtitle': 'Únete a más de 500 empresas que ya están creciendo con nuestro cold outreach impulsado por IA y orientación de ventas.',
     'home.testimonials.title': 'Lo Que Dicen Nuestros Clientes',
@@ -468,21 +544,41 @@ const translations: Record<string, Record<string, string>> = {
     'home.testimonials.3.company': 'The FilmFactory',
     'home.testimonials.3.result': 'Outreach dirigido',
     
-    // Services Page
-    'services.title': 'Nuestros Servicios',
-    'services.subtitle': 'Cuatro Soluciones Principales para el Éxito Completo en Generación de Leads',
+          // Approach Page
+      'approach.title': 'Nuestro Enfoque',
+      'approach.subtitle': 'Transformando empresas con cold outreach impulsado por IA y orientación de ventas inteligente. Flujo de leads consistente, mejores conversiones.',
     
     'services.data.title': 'Recolección y Enriquecimiento de Datos',
-    'services.data.description': 'Análisis avanzado de datos para dirigirse a audiencias ideales para cold outreach, proporcionando leads de alta calidad y actualizados con enriquecimiento integral.',
+    'services.data.description': 'Identificamos y recopilamos leads hiperrelevantes dentro de tu público objetivo, enriquecidos con información valiosa de la empresa. Así siempre recibes datos actuales, cualitativos y validados, listos para outreach.',
+    'services.data.feature1': 'Scraping inteligente y análisis de datos',
+    'services.data.feature2': 'Enriquecimiento en tiempo real con industria, rol y tamaño de empresa',
+    'services.data.feature3': 'Validación y puntuación de relevancia',
+    'services.data.feature4': '100% conforme con GDPR',
+    'services.data.cta': 'Nosotros encontramos tu público objetivo. Tú te enfocas en el crecimiento.',
     
     'services.outreach.title': 'Cold Outreach Automatizado',
-    'services.outreach.description': 'Campañas de cold email personalizadas que llegan a las personas correctas consistentemente, llenando tu pipeline con prospectos calificados en piloto automático.',
+    'services.outreach.description': 'Construimos campañas inteligentes y personalizadas en tu nombre — por email, completamente automatizadas. Así tus propuestas llegan a las personas correctas en el momento correcto.',
+    'services.outreach.feature1': 'Emails personales y seguimientos',
+    'services.outreach.feature2': 'Gestión de campañas en Smartlead (u otra plataforma)',
+    'services.outreach.feature3': 'Pruebas, optimización y escalado',
+    'services.outreach.feature4': 'Información sobre aperturas, clics y respuestas',
+    'services.outreach.cta': 'No más trabajo manual. ¿Tu primer momento de contacto? Completamente arreglado.',
     
-    'services.guidance.title': 'Guía de Ventas Dirigida por IA',
-    'services.guidance.description': 'Análisis en tiempo real y guía de ventas para saber exactamente qué decir y cuándo durante el seguimiento, moviendo leads a través de tu pipeline de manera efectiva.',
+    'services.guidance.title': 'Orientación de Ventas Impulsada por IA',
+    'services.guidance.description': 'Cada respuesta es leída y analizada automáticamente por IA. Por cada lead, recibes consejos concretos de seguimiento, para que sepas exactamente qué decir y cuándo — incluso sin experiencia en ventas.',
+    'services.guidance.feature1': 'Clasificación IA: HOT, WARM, COLD, NI',
+    'services.guidance.feature2': 'Consejos personales de seguimiento por lead',
+    'services.guidance.feature3': 'Reconocimiento de idioma y salida multilingüe (NL, EN, DE, ES)',
+    'services.guidance.feature4': 'Sistema de aprendizaje continuo basado en tus casos',
+    'services.guidance.cta': 'No solo leads — sino también las palabras correctas para cerrarlos.',
     
     'services.conversion.title': 'Conversión y Cierre de Tratos',
-    'services.conversion.description': 'Solo se pasan leads cálidos, con recomendaciones de seguimiento accionables y guía de IA para cerrar tratos con confianza.',
+    'services.conversion.description': 'Solo recibes leads interesados con consejos de seguimiento. Así conduces conversaciones de ventas dirigidas y conviertes más — sin el ruido. Nosotros enviamos reportes. Tú cierras los tratos.',
+    'services.conversion.feature1': 'Notificaciones automáticas de leads por cliente',
+    'services.conversion.feature2': 'Filtrado de leads cálidos',
+    'services.conversion.feature3': 'Seguimiento de tratos y reportes (opcional)',
+    'services.conversion.feature4': 'Enfoque completo en conversión',
+    'services.conversion.cta': 'Tú haces el cierre — nosotros nos encargamos de todo lo anterior.',
     
     // Solutions Page
     'solutions.title': 'Soluciones Que Generan Resultados',
@@ -528,7 +624,15 @@ const translations: Record<string, Record<string, string>> = {
     'home.control.point2': 'Colaboración real con tu equipo de estrategia — nada de IA como caja negra',
     'home.control.point3': 'Cada recomendación de IA viene con contexto y claridad',
     'home.control.point4': 'Siempre tienes el control total de tu flujo de ventas — nosotros apoyamos, no reemplazamos',
+    'footer.quickLinks': 'Quick Links',
     'footer.tagline': 'Transformamos empresas con cold outreach impulsado por IA y orientación de ventas inteligente. Flujo de leads consistente, mejores conversiones.',
+    // Approach Page CTA
+    'approach.cta.title': 'Ready to Solve Your Lead Generation Challenges?',
+    'approach.cta.subtitle': 'Let\'s discuss how our proven solutions can address your specific pain points and drive measurable results.',
+    'approach.cta.button': 'Get Your Strategy Session',
+    // Approach Page Challenges Section
+    'approach.challenges.title': 'Common Challenges We Solve',
+    'approach.challenges.subtitle': 'Real problems with proven solutions and measurable results.',
   },
 };
 
@@ -537,14 +641,36 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const getInitialLanguage = (): Language => {
+    // Check localStorage first
+    const savedLanguage = localStorage.getItem('language') as Language;
+    if (savedLanguage && ['en', 'nl', 'de', 'es'].includes(savedLanguage)) {
+      return savedLanguage;
+    }
+    
+    // Detect browser language
+    const browserLang = navigator.language.toLowerCase();
+    if (browserLang.startsWith('es')) return 'es'; // Spanish
+    if (browserLang.startsWith('nl')) return 'nl'; // Dutch
+    if (browserLang.startsWith('de')) return 'de'; // German
+    
+    return 'en'; // Default to English
+  };
+
+  const [language, setLanguage] = useState<Language>(getInitialLanguage);
+
+  // Save to localStorage when language changes
+  const handleSetLanguage = (lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem('language', lang);
+  };
 
   const t = (key: string): string => {
     return translations[language][key] || key;
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

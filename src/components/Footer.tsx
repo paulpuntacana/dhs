@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
@@ -41,13 +41,8 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
-                  {t('nav.services')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
-                  {t('nav.solutions')}
+                <Link to="/approach" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                  {t('nav.approach')}
                 </Link>
               </li>
               <li>

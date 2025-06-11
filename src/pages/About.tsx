@@ -68,7 +68,7 @@ const About: React.FC = () => {
             <AnimatedSection animation="slideRight" delay={300}>
               <div className="relative">
                 <img 
-                  src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" 
+                  src="/images/about-1.jpg" 
                   alt="About AI Lead Generation"
                   className="w-full rounded-2xl shadow-2xl"
                 />
@@ -92,7 +92,7 @@ const About: React.FC = () => {
             <AnimatedSection animation="slideLeft">
               <div className="relative">
                 <img 
-                  src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" 
+                  src="/images/about-2.jpg" 
                   alt="Our Mission"
                   className="w-full rounded-2xl shadow-2xl"
                 />
@@ -248,10 +248,10 @@ const About: React.FC = () => {
                 <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
               <Link
-                to="/services"
+                to="/approach"
                 className="inline-flex items-center px-8 py-4 text-lg font-semibold text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                {t('nav.services')}
+                {t('nav.approach')}
               </Link>
             </div>
           </AnimatedSection>
