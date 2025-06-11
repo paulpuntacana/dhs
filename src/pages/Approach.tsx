@@ -9,7 +9,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import AnimatedSection from '../components/AnimatedSection';
 
 const Services: React.FC = () => {
-  const { t, language } = useLanguage();
+  const { t, language, getLocalizedPath } = useLanguage();
 
   const services = [
     {
@@ -413,7 +413,7 @@ const Services: React.FC = () => {
               {language === 'es' && "Hablemos de cómo nuestras soluciones probadas pueden abordar tus desafíos específicos y generar resultados medibles."}
             </p>
             <Link
-              to="/contact"
+              to={getLocalizedPath('/contact')}
               className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-2xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group"
             >
               {language === 'nl' && "Krijg je strategiesessie"}
@@ -776,7 +776,7 @@ const Services: React.FC = () => {
               {language === 'es' && "Hablemos de cómo nuestras soluciones probadas pueden abordar tus desafíos específicos y entregar resultados medibles."}
             </p>
             <Link
-              to="/contact"
+              to={getLocalizedPath('/contact')}
               className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-2xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group"
             >
               {language === 'nl' && "Laten we praten!"}

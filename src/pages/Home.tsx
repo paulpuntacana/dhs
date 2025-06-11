@@ -5,7 +5,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import AnimatedSection from '../components/AnimatedSection';
 
 const Home: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, getLocalizedPath } = useLanguage();
 
   const painPoints = [
     { icon: Target, text: t('home.pain.prospect') },
@@ -166,7 +166,7 @@ const Home: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <AnimatedSection animation="scale" delay={600}>
                   <Link
-                    to="/contact"
+                    to={getLocalizedPath('/contact')}
                     className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-2xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group"
                   >
                     {t('home.hero.cta')}
@@ -176,7 +176,7 @@ const Home: React.FC = () => {
                 
                 <AnimatedSection animation="scale" delay={700}>
                   <Link
-                    to="/approach"
+                    to={getLocalizedPath('/approach')}
                     className="inline-flex items-center px-8 py-4 text-lg font-semibold text-[#1B365D] bg-blue-50 rounded-2xl hover:bg-blue-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     {t('nav.approach')}
@@ -371,14 +371,14 @@ const Home: React.FC = () => {
             <p className="text-xl text-gray-600 mb-12">{t('home.cta.subtitle')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                to={getLocalizedPath('/contact')}
                 className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#104ee3] to-[#104ee3]/90 rounded-2xl hover:from-[#104ee3]/90 hover:to-[#104ee3]/80 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group"
               >
                 {t('common.getStarted')}
                 <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
               <Link
-                to="/approach"
+                to={getLocalizedPath('/approach')}
                 className="inline-flex items-center px-8 py-4 text-lg font-semibold text-[#1B365D] bg-blue-50 rounded-2xl hover:bg-blue-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 {t('home.learnMore')}

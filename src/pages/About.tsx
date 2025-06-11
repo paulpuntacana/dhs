@@ -5,7 +5,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, getLocalizedPath } = useLanguage();
 
   const values = [
     {
@@ -189,23 +189,23 @@ const About: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection animation="slideUp">
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Company Information</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('about.company.title')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Legal Entity</h3>
-                  <p className="text-gray-600">Den Hartogh Solutions</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('about.company.legal.title')}</h3>
+                  <p className="text-gray-600">{t('about.company.legal.value')}</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Chamber of Commerce</h3>
-                  <p className="text-gray-600">93891237</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('about.company.commerce.title')}</h3>
+                  <p className="text-gray-600">{t('about.company.commerce.value')}</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Business Focus</h3>
-                  <p className="text-gray-600">AI-Powered Lead Generation & Sales Optimization</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('about.company.focus.title')}</h3>
+                  <p className="text-gray-600">{t('about.company.focus.value')}</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Service Area</h3>
-                  <p className="text-gray-600">International (English, Dutch, German, Spanish)</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('about.company.service.title')}</h3>
+                  <p className="text-gray-600">{t('about.company.service.value')}</p>
                 </div>
               </div>
             </div>
@@ -218,21 +218,21 @@ const About: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection animation="slideUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-8">
-              Partner With Us for Growth
+              {t('about.partner.title')}
             </h2>
             <p className="text-xl text-gray-600 mb-12">
-              Experience the perfect blend of AI innovation and human expertise. Let's build your lead generation success story together.
+              {t('about.partner.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                to={getLocalizedPath('/contact')}
                 className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl group"
               >
                 {t('contact.title')}
                 <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
               <Link
-                to="/approach"
+                to={getLocalizedPath('/approach')}
                 className="inline-flex items-center px-8 py-4 text-lg font-semibold text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 {t('nav.approach')}

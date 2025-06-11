@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, getLocalizedPath } = useLanguage();
 
   return (
     <div className="relative overflow-hidden bg-white">
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
           <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
             <div className="rounded-md shadow">
               <Link
-                to="/contact"
+                to={getLocalizedPath('/contact')}
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#1B365D] hover:bg-[#1B365D]/90 md:py-4 md:text-lg md:px-10"
               >
                 {t('home.hero.cta')}

@@ -213,6 +213,19 @@ const translations: Record<string, Record<string, string>> = {
     'about.stats.title': 'Our Impact in Numbers',
     'about.stats.description': 'Measurable results that speak to our commitment to client success.',
     
+    // Company Information
+    'about.company.title': 'Company Information',
+    'about.company.legal.title': 'Legal Entity',
+    'about.company.legal.value': 'Den Hartogh Solutions',
+    'about.company.commerce.title': 'Chamber of Commerce',
+    'about.company.commerce.value': '93891237',
+    'about.company.focus.title': 'Business Focus',
+    'about.company.focus.value': 'AI-Powered Lead Generation & Sales Optimization',
+    'about.company.service.title': 'Service Area',
+    'about.company.service.value': 'International (English, Dutch, German, Spanish)',
+    'about.partner.title': 'Partner With Us for Growth',
+    'about.partner.description': 'Experience the perfect blend of AI innovation and human expertise. Let\'s build your lead generation success story together.',
+    
     // Contact Page
     'contact.title': 'Get Your Strategy Session',
     'contact.subtitle': 'Ready to Transform Your Cold Outreach?',
@@ -279,17 +292,6 @@ const translations: Record<string, Record<string, string>> = {
     'common.getStarted': 'Get Started',
     'common.contact': 'Contact Us',
     
-    // Hero
-    'home.hero.title': 'AI Lead Generation',
-    'home.hero.subtitle': 'Smarter Lead Generation – Powered by AI, Driven by Humans',
-    // Process uitleg
-    'home.process.title': 'How Our Cold Outreach Process Works',
-    'home.process.subtitle': 'A systematic approach to fill your pipeline with qualified leads and convert them into customers',
-    // Control points
-    'home.control.point1': 'Campaigns only go live with your approval',
-    'home.control.point2': 'Real collaboration with your strategy team — no black box AI',
-    'home.control.point3': 'Every AI recommendation comes with context and clarity',
-    'home.control.point4': 'You stay in full control of your sales flow — we support, not override',
     // Footer
     'footer.quickLinks': 'Quick Links',
     'footer.tagline': 'We transform businesses with AI-powered cold outreach and intelligent sales guidance. Consistent lead flow, better conversions.',
@@ -438,6 +440,19 @@ const translations: Record<string, Record<string, string>> = {
     'about.values.4.description': 'We leveren niet alleen leads — we helpen je ze om te zetten naar klanten met duidelijke follow-up adviezen.',
     'about.stats.title': 'Onze Impact in Cijfers',
     'about.stats.description': 'Meetbare resultaten die spreken tot onze toewijding aan klantsucces.',
+    
+    // Company Information
+    'about.company.title': 'Bedrijfsinformatie',
+    'about.company.legal.title': 'Rechtsentiteit',
+    'about.company.legal.value': 'Den Hartogh Solutions',
+    'about.company.commerce.title': 'Kamer van Koophandel',
+    'about.company.commerce.value': '93891237',
+    'about.company.focus.title': 'Bedrijfsfocus',
+    'about.company.focus.value': 'AI-gedreven Leadgeneratie & Sales Optimalisatie',
+    'about.company.service.title': 'Serviceregio',
+    'about.company.service.value': 'Internationaal (Engels, Nederlands, Duits, Spaans)',
+    'about.partner.title': 'Partner Met Ons Voor Groei',
+    'about.partner.description': 'Ervaar de perfecte combinatie van AI-innovatie en menselijke expertise. Laten we samen jouw leadgeneratie succesverhaal bouwen.',
     
     // Contact Page
     'contact.title': 'Boek Uw Strategie Sessie',
@@ -656,6 +671,19 @@ const translations: Record<string, Record<string, string>> = {
     'about.stats.title': 'Unsere Wirkung in Zahlen',
     'about.stats.description': 'Messbare Ergebnisse, die für unser Engagement für den Kundenerfolg sprechen.',
     
+    // Company Information
+    'about.company.title': 'Unternehmensinformationen',
+    'about.company.legal.title': 'Rechtsform',
+    'about.company.legal.value': 'Den Hartogh Solutions',
+    'about.company.commerce.title': 'Handelskammer',
+    'about.company.commerce.value': '93891237',
+    'about.company.focus.title': 'Geschäftsfokus',
+    'about.company.focus.value': 'KI-gestützte Lead-Generierung & Vertriebsoptimierung',
+    'about.company.service.title': 'Servicebereich',
+    'about.company.service.value': 'International (Englisch, Niederländisch, Deutsch, Spanisch)',
+    'about.partner.title': 'Partnerschaft für Wachstum',
+    'about.partner.description': 'Erleben Sie die perfekte Kombination aus KI-Innovation und menschlicher Expertise. Lassen Sie uns gemeinsam Ihre Lead-Generierungs-Erfolgsgeschichte schreiben.',
+    
     // Contact Page
     'contact.title': 'Buchen Sie Ihre Strategie-Session',
     'contact.subtitle': 'Bereit, Ihre Cold Outreach zu Transformieren?',
@@ -722,26 +750,16 @@ const translations: Record<string, Record<string, string>> = {
     'common.getStarted': 'Loslegen',
     'common.contact': 'Kontakt Aufnehmen',
     
-    // Hero
-    'home.hero.title': 'AI Lead Generierung',
-    'home.hero.subtitle': 'Intelligentere Lead-Generierung – Angetrieben von KI, Getrieben von Menschen',
-    // Process uitleg
-    'home.process.title': 'Cómo Funciona Nuestro Proceso de Cold Outreach',
-    'home.process.subtitle': 'Un enfoque sistemático para llenar tu pipeline con leads calificados y convertirlos en clientes',
-    // Control points
-    'home.control.point1': 'Las campañas solo se lanzan con tu aprobación',
-    'home.control.point2': 'Colaboración real con tu equipo de estrategia — nada de IA como caja negra',
-    'home.control.point3': 'Cada recomendación de IA viene con contexto y claridad',
-    'home.control.point4': 'Siempre tienes el control total de tu flujo de ventas — nosotros apoyamos, no reemplazamos',
-    'footer.quickLinks': 'Quick Links',
-    'footer.tagline': 'Transformamos empresas con cold outreach impulsado por IA y orientación de ventas inteligente. Flujo de leads consistente, mejores conversiones.',
+    // Footer
+    'footer.quickLinks': 'Schnelle Links',
+    'footer.tagline': 'Wir transformieren Unternehmen mit KI-gestützter Cold Outreach und intelligenter Verkaufsberatung. Konsistenter Lead-Fluss, bessere Konversionen.',
     // Approach Page CTA
-    'approach.cta.title': 'Ready to Solve Your Lead Generation Challenges?',
-    'approach.cta.subtitle': 'Let\'s discuss how our proven solutions can address your specific pain points and drive measurable results.',
-    'approach.cta.button': 'Get Your Strategy Session',
+    'approach.cta.title': 'Bereit, Ihre Lead-Generierungs-Herausforderungen zu lösen?',
+    'approach.cta.subtitle': 'Lassen Sie uns besprechen, wie unsere bewährten Lösungen Ihre spezifischen Schmerzpunkte adressieren und messbare Ergebnisse erzielen können.',
+    'approach.cta.button': 'Strategie-Session Buchen',
     // Approach Page Challenges Section
-    'approach.challenges.title': 'Common Challenges We Solve',
-    'approach.challenges.subtitle': 'Real problems with proven solutions and measurable results.',
+    'approach.challenges.title': 'Häufige Herausforderungen, Die Wir Lösen',
+    'approach.challenges.subtitle': 'Echte Probleme mit bewährten Lösungen und messbaren Ergebnissen.',
   },
   es: {
     // Navigation
@@ -879,6 +897,19 @@ const translations: Record<string, Record<string, string>> = {
     'about.stats.title': 'Nuestro Impacto en Números',
     'about.stats.description': 'Resultados medibles que hablan de nuestro compromiso con el éxito del cliente.',
     
+    // Company Information
+    'about.company.title': 'Información de la Empresa',
+    'about.company.legal.title': 'Entidad Legal',
+    'about.company.legal.value': 'Den Hartogh Solutions',
+    'about.company.commerce.title': 'Cámara de Comercio',
+    'about.company.commerce.value': '93891237',
+    'about.company.focus.title': 'Enfoque Empresarial',
+    'about.company.focus.value': 'Generación de Leads Impulsada por IA y Optimización de Ventas',
+    'about.company.service.title': 'Área de Servicio',
+    'about.company.service.value': 'Internacional (Inglés, Holandés, Alemán, Español)',
+    'about.partner.title': 'Asociate Con Nosotros Para Crecer',
+    'about.partner.description': 'Experimenta la combinación perfecta de innovación IA y experiencia humana. Construyamos juntos tu historia de éxito en generación de leads.',
+    
     // Contact Page
     'contact.title': 'Reserva Tu Sesión de Estrategia',
     'contact.subtitle': '¿Listo para Transformar Tu Cold Outreach?',
@@ -945,26 +976,16 @@ const translations: Record<string, Record<string, string>> = {
     'common.getStarted': 'Empezar',
     'common.contact': 'Contactarnos',
     
-    // Hero
-    'home.hero.title': 'Generación de Leads AI',
-    'home.hero.subtitle': 'Generación de Leads Más Inteligente – Impulsada por IA, Impulsada por Humanos',
-    // Process uitleg
-    'home.process.title': 'Cómo Funciona Nuestro Proceso de Cold Outreach',
-    'home.process.subtitle': 'Un enfoque sistemático para llenar tu pipeline con leads calificados y convertirlos en clientes',
-    // Control points
-    'home.control.point1': 'Las campañas solo se lanzan con tu aprobación',
-    'home.control.point2': 'Colaboración real con tu equipo de estrategia — nada de IA como caja negra',
-    'home.control.point3': 'Cada recomendación de IA viene con contexto y claridad',
-    'home.control.point4': 'Siempre tienes el control total de tu flujo de ventas — nosotros apoyamos, no reemplazamos',
-    'footer.quickLinks': 'Quick Links',
+    // Footer
+    'footer.quickLinks': 'Enlaces Rápidos',
     'footer.tagline': 'Transformamos empresas con cold outreach impulsado por IA y orientación de ventas inteligente. Flujo de leads consistente, mejores conversiones.',
     // Approach Page CTA
-    'approach.cta.title': 'Ready to Solve Your Lead Generation Challenges?',
-    'approach.cta.subtitle': 'Let\'s discuss how our proven solutions can address your specific pain points and drive measurable results.',
-    'approach.cta.button': 'Get Your Strategy Session',
+    'approach.cta.title': '¿Listo para Resolver Tus Desafíos de Generación de Leads?',
+    'approach.cta.subtitle': 'Hablemos de cómo nuestras soluciones probadas pueden abordar tus puntos de dolor específicos y generar resultados medibles.',
+    'approach.cta.button': 'Reservar Sesión de Estrategia',
     // Approach Page Challenges Section
-    'approach.challenges.title': 'Common Challenges We Solve',
-    'approach.challenges.subtitle': 'Real problems with proven solutions and measurable results.',
+    'approach.challenges.title': 'Desafíos Comunes Que Resolvemos',
+    'approach.challenges.subtitle': 'Problemas reales con soluciones probadas y resultados medibles.',
   },
 };
 
