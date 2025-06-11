@@ -81,7 +81,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-white pt-20 lg:pt-0">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-50 pt-20 pb-16 lg:pt-0 lg:pb-0">
         {/* TOP Moderne 2024 SaaS-achtergrond */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           {/* Animated dot grid pattern */}
@@ -133,6 +133,11 @@ const Home: React.FC = () => {
               33% { transform: translateY(-45%) translateX(10px) rotate(0.5deg); }
               66% { transform: translateY(-55%) translateX(-8px) rotate(-0.3deg); }
             }
+            @keyframes smoothBlurFloat {
+              0%, 100% { transform: translateY(-50%) translateX(0) rotate(0deg); }
+              33% { transform: translateY(-52%) translateX(2px) rotate(0.1deg); }
+              66% { transform: translateY(-48%) translateX(-2px) rotate(-0.1deg); }
+            }
             @keyframes drift {
               0%, 100% { transform: translate(0px, 0px); }
               33% { transform: translate(20px, -15px); }
@@ -143,9 +148,24 @@ const Home: React.FC = () => {
       
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Mobile hero image - shown first on mobile, above title */}
+          <div className="lg:hidden pt-8 pb-12">
+            <AnimatedSection animation="slideUp" delay={200} className="text-center px-4">
+              <div className="relative max-w-sm mx-auto">
+                <img 
+                  src="/images/hero-banner.png" 
+                  alt="AI-Powered Lead Generation" 
+                  className="w-full h-auto opacity-85 rounded-xl shadow-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent rounded-xl"></div>
+              </div>
+            </AnimatedSection>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
-            {/* Glassmorphism floating card - alleen achter content, alleen op desktop */}
-            <div className="hidden lg:block absolute left-[-8%] top-[50%] transform -translate-y-1/2 w-[113%] h-[120%] bg-white/15 backdrop-blur-sm rounded-3xl shadow-xl z-0" style={{ animation: 'smoothBlurFloat 15s ease-in-out infinite' }}></div>
+            {/* Glassmorphism floating card - verborgen op mobiel, zichtbaar op tablet en desktop */}
+            <div className="hidden md:block absolute left-[-8%] top-[50%] transform -translate-y-1/2 w-[113%] h-[120%] bg-white/15 backdrop-blur-sm rounded-3xl shadow-xl z-0" style={{ animation: 'smoothBlurFloat 25s ease-in-out infinite' }}></div>
             
             <div className="text-center lg:text-left relative z-10">
               <AnimatedSection animation="fadeIn">
@@ -193,20 +213,6 @@ const Home: React.FC = () => {
                   alt="AI-Powered Lead Generation" 
                   className="relative w-full h-auto opacity-80"
                 />
-              </div>
-            </AnimatedSection>
-          </div>
-          
-          {/* Mobile hero image - shown below CTA buttons, inside hero section */}
-          <div className="lg:hidden mt-12">
-            <AnimatedSection animation="slideUp" delay={800} className="text-center px-4">
-              <div className="relative max-w-sm mx-auto">
-                <img 
-                  src="/images/hero-banner.png" 
-                  alt="AI-Powered Lead Generation" 
-                  className="w-full h-auto opacity-85 rounded-xl shadow-lg"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent rounded-xl"></div>
               </div>
             </AnimatedSection>
           </div>

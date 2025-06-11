@@ -105,6 +105,8 @@ const translations: Record<string, Record<string, string>> = {
     'home.solution.control': 'You Always Have the Steering Wheel',
     
     // Home Page Process Steps
+    'home.process.title': 'How Our Cold Outreach Process Works',
+    'home.process.subtitle': 'A systematic approach to fill your pipeline with qualified leads and convert them into customers',
     'home.process.1.title': 'Target & Collect',
     'home.process.1.desc': 'AI identifies and enriches your ideal prospects with precision data',
     'home.process.2.title': 'Cold Outreach',
@@ -565,6 +567,8 @@ const translations: Record<string, Record<string, string>> = {
     'home.solution.control': 'Sie Haben Immer Das Steuer in der Hand',
     
     // Home Page Process Steps
+    'home.process.title': 'Wie Unser Cold Outreach Prozess Funktioniert',
+    'home.process.subtitle': 'Ein systematischer Ansatz, um Ihre Pipeline mit qualifizierten Leads zu füllen und sie in Kunden zu verwandeln',
     'home.process.1.title': 'Zielgruppe & Sammeln',
     'home.process.1.desc': 'KI identifiziert und bereichert Ihre idealen Zielkunden mit präzisen Daten',
     'home.process.2.title': 'Cold Outreach',
@@ -791,6 +795,8 @@ const translations: Record<string, Record<string, string>> = {
     'home.solution.control': 'Siempre Tienes el Control',
     
     // Home Page Process Steps
+    'home.process.title': 'Cómo Funciona Nuestro Proceso de Cold Outreach',
+    'home.process.subtitle': 'Un enfoque sistemático para llenar tu pipeline con leads calificados y convertirlos en clientes',
     'home.process.1.title': 'Identificar y Recopilar',
     'home.process.1.desc': 'La IA identifica y enriquece tus prospectos ideales con datos precisos',
     'home.process.2.title': 'Cold Outreach',
