@@ -328,10 +328,10 @@ const Services: React.FC = () => {
                 className="relative"
               >
                 {/* Horizontal service card */}
-                <div className={`flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                <div className={`flex flex-col lg:flex-row items-center gap-6 lg:gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   
                   {/* Content side */}
-                  <div className="flex-1">
+                  <div className="flex-1 w-full">
                     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-80 flex flex-col">
                       {/* Header */}
                       <div className={`p-4 ${getColorClasses(service.color).bg} rounded-t-xl flex-shrink-0`}>
@@ -379,12 +379,12 @@ const Services: React.FC = () => {
                   </div>
 
                   {/* Infographic side */}
-                  <div className="flex-shrink-0">
+                  <div className="flex-shrink-0 w-full lg:w-auto flex justify-center">
                     <div className="relative group">
                       <img 
                         src={`/images/step${index + 1}.png`}
                         alt={service.title}
-                        className="w-80 h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                        className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
