@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
       formDataForSubmit.append('company', formData.company);
       formDataForSubmit.append('message', formData.message);
 
-      const response = await fetch('/', {
+      const response = await fetch(window.location.origin + '/', {
         method: 'POST',
         body: formDataForSubmit
       });
