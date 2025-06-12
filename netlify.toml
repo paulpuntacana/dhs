@@ -7,5 +7,13 @@
   to = "/index.html"
   status = 200
 
-[form]
-  settings = { submission_handling = "webhook" } 
+[[forms]]
+  name = "contact"
+  
+  [forms.settings]
+    submission_handling = "forms"
+    
+  [[forms.notifications]]
+    type = "email" 
+    event = "submission"
+    to = "paul@denhartogh.solutions" 
