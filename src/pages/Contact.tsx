@@ -171,7 +171,7 @@ const Contact: React.FC = () => {
                           value={formData.name}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                          placeholder="John Doe"
+                          placeholder={t('contact.form.placeholder.name')}
                         />
                       </div>
 
@@ -187,7 +187,7 @@ const Contact: React.FC = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                          placeholder="john@company.com"
+                          placeholder={t('contact.form.placeholder.email')}
                         />
                       </div>
 
@@ -203,7 +203,7 @@ const Contact: React.FC = () => {
                           value={formData.company}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                          placeholder="Your Company Name"
+                          placeholder={t('contact.form.placeholder.company')}
                         />
                       </div>
 
@@ -219,7 +219,7 @@ const Contact: React.FC = () => {
                           value={formData.message}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                          placeholder="Tell us about your current lead generation challenges and goals..."
+                          placeholder={t('contact.form.placeholder.message')}
                         />
                       </div>
 
@@ -231,7 +231,7 @@ const Contact: React.FC = () => {
                         {isSubmitting ? (
                           <>
                             <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
-                            Submitting...
+                            {t('contact.form.submitting')}
                           </>
                         ) : (
                           <>
@@ -245,9 +245,9 @@ const Contact: React.FC = () => {
                 ) : (
                   <div className="text-center py-12">
                     <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-6" />
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('contact.form.success.title')}</h2>
                     <p className="text-lg text-gray-600 mb-6">
-                      Your strategy session request has been submitted successfully. We'll contact you within 24 hours to schedule your consultation.
+                      {t('contact.form.success.message')}
                     </p>
                     <button
                       onClick={() => {
@@ -256,7 +256,7 @@ const Contact: React.FC = () => {
                       }}
                       className="text-blue-600 hover:text-blue-700 font-medium"
                     >
-                      Submit Another Request
+                      {t('contact.form.success.another')}
                     </button>
                   </div>
                 )}
