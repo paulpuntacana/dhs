@@ -26,17 +26,17 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Create form data for Netlify
-      const form = e.target as HTMLFormElement;
-      const formDataForSubmit = new FormData();
+      // Create URLSearchParams for Netlify forms (alternative method)
+      const formDataForSubmit = new URLSearchParams();
       formDataForSubmit.append('form-name', 'contact');
       formDataForSubmit.append('name', formData.name);
       formDataForSubmit.append('email', formData.email);
       formDataForSubmit.append('company', formData.company);
       formDataForSubmit.append('message', formData.message);
 
-      const response = await fetch(window.location.origin + '/', {
+      const response = await fetch('/', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formDataForSubmit
       });
 
@@ -156,8 +156,9 @@ const Contact: React.FC = () => {
                 {!isSubmitted ? (
                   <>
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('contact.form.title')}</h2>
-                    <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST" data-netlify="true">
+                    <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                       <input type="hidden" name="form-name" value="contact" />
+                      <input type="hidden" name="bot-field" />
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                           {t('contact.form.name')} *
