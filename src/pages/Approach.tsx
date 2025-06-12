@@ -319,7 +319,7 @@ const Services: React.FC = () => {
       {/* Timeline Services */}
       <section className="pt-12 pb-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8 sm:space-y-12 lg:space-y-16">
+          <div className="space-y-12 sm:space-y-12 lg:space-y-16">
             {services.map((service, index) => (
               <AnimatedSection
                 key={index}
