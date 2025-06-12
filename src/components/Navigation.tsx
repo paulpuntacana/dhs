@@ -21,10 +21,10 @@ const Navigation: React.FC = () => {
   }, []);
 
   const languages: { code: Language; name: string; flag: string }[] = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'es', name: 'Español', flag: '🇩🇴' },
+    { code: 'en', name: 'English', flag: 'us' },
+    { code: 'nl', name: 'Nederlands', flag: 'nl' },
+    { code: 'de', name: 'Deutsch', flag: 'ch' },
+    { code: 'es', name: 'Español', flag: 'do' },
   ];
 
   const menuItems = [
@@ -80,7 +80,13 @@ const Navigation: React.FC = () => {
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#1B365D] transition-colors duration-200"
               >
-                <span className="text-base">{languages.find(l => l.code === language)?.flag}</span>
+                <div className="w-6 h-4 rounded border overflow-hidden shadow-sm">
+                  <img 
+                    src={`https://flagcdn.com/w40/${languages.find(l => l.code === language)?.flag}.png`}
+                    alt={`${languages.find(l => l.code === language)?.name} flag`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <span className="hidden sm:inline">{languages.find(l => l.code === language)?.name}</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -99,7 +105,13 @@ const Navigation: React.FC = () => {
                           language === lang.code ? 'bg-[#1B365D]/10 text-[#1B365D]' : 'text-gray-700'
                         }`}
                       >
-                        <span className="text-base mr-3">{lang.flag}</span>
+                        <div className="w-6 h-4 rounded border overflow-hidden shadow-sm mr-3">
+                          <img 
+                            src={`https://flagcdn.com/w40/${lang.flag}.png`}
+                            alt={`${lang.name} flag`}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                         {lang.name}
                       </button>
                     ))}

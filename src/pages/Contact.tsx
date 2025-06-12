@@ -26,17 +26,18 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Submit to Netlify Forms
+      // Create form data for Netlify
+      const form = e.target as HTMLFormElement;
+      const formDataForSubmit = new FormData();
+      formDataForSubmit.append('form-name', 'contact');
+      formDataForSubmit.append('name', formData.name);
+      formDataForSubmit.append('email', formData.email);
+      formDataForSubmit.append('company', formData.company);
+      formDataForSubmit.append('message', formData.message);
+
       const response = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          'name': formData.name,
-          'email': formData.email,
-          'company': formData.company,
-          'message': formData.message
-        }).toString()
+        body: formDataForSubmit
       });
 
       if (response.ok) {

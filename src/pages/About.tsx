@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Bot, Users, Award, Target, TrendingUp, ArrowRight, BarChart3, Zap, Handshake, Star } from 'lucide-react';
+import { Heart, Bot, Users, Award, Target, TrendingUp, ArrowRight, BarChart3, Zap, Handshake, Star, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import AnimatedSection from '../components/AnimatedSection';
 import { Link } from 'react-router-dom';
@@ -57,7 +57,44 @@ const About: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection animation="slideLeft">
+            {/* Mobile: Image first, then text */}
+            <AnimatedSection animation="slideRight" delay={300} className="lg:order-2">
+              <div className="relative bg-gradient-to-br from-[#104ee3]/10 to-[#104ee3]/5 rounded-2xl p-8 shadow-xl">
+                <div className="flex items-center justify-center">
+                  <a 
+                    href="https://www.linkedin.com/in/pauldenhartogh/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block hover:scale-105 transition-transform duration-200"
+                  >
+                    <img 
+                      src="/images/foto.jpg" 
+                      alt="Paul den Hartogh - Founder DHS"
+                      className="w-72 h-72 object-cover rounded-xl shadow-lg cursor-pointer"
+                    />
+                  </a>
+                </div>
+                <div className="mt-6 text-center">
+                  <div className="bg-white/95 backdrop-blur-sm p-4 rounded-lg inline-block shadow-lg">
+                    <p className="text-gray-900 font-bold text-lg">Paul Den Hartogh</p>
+                    <div className="flex items-center justify-center gap-2">
+                      <p className="text-[#104ee3] font-semibold">{t('about.founder')}</p>
+                      <a 
+                        href="https://www.linkedin.com/in/pauldenhartogh/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-[#104ee3] hover:text-blue-700 transition-colors duration-200"
+                        title="LinkedIn Profile"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection animation="slideLeft" className="lg:order-1">
               <div className="space-y-6">
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {t('about.story.paragraph1')}
@@ -71,24 +108,6 @@ const About: React.FC = () => {
                 <p className="text-lg text-gray-600 font-medium italic border-l-4 border-[#104ee3] pl-4">
                   {t('about.story.signature')}
                 </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection animation="slideRight" delay={300}>
-              <div className="relative bg-gradient-to-br from-[#104ee3]/10 to-[#104ee3]/5 rounded-2xl p-8 shadow-xl">
-                <div className="flex items-center justify-center">
-                  <img 
-                    src="/images/foto.jpg" 
-                    alt="Paul den Hartogh - Founder DHS"
-                    className="w-72 h-72 object-cover rounded-xl shadow-lg"
-                  />
-                </div>
-                <div className="mt-6 text-center">
-                  <div className="bg-white/95 backdrop-blur-sm p-4 rounded-lg inline-block shadow-lg">
-                    <p className="text-gray-900 font-bold text-lg">Paul Den Hartogh</p>
-                    <p className="text-[#104ee3] font-semibold">{t('about.founder')}</p>
-                  </div>
-                </div>
               </div>
             </AnimatedSection>
           </div>

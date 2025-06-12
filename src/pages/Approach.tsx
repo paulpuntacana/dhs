@@ -319,7 +319,7 @@ const Services: React.FC = () => {
       {/* Timeline Services */}
       <section className="pt-12 pb-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16 sm:space-y-20 lg:space-y-24">
+          <div className="space-y-8 sm:space-y-12 lg:space-y-16">
             {services.map((service, index) => (
               <AnimatedSection
                 key={index}
@@ -331,8 +331,8 @@ const Services: React.FC = () => {
                 <div className={`flex flex-col lg:flex-row items-stretch lg:items-center gap-6 lg:gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   
                   {/* Content side */}
-                  <div className="flex-1 w-full">
-                    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 min-h-[20rem] lg:h-80 flex flex-col">
+                  <div className="flex-1 w-full relative">
+                    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col min-h-[20rem]">
                       {/* Header */}
                       <div className={`p-4 sm:p-6 ${getColorClasses(service.color).bg} rounded-t-xl flex-shrink-0`}>
                         <div className="flex items-center">
@@ -358,7 +358,7 @@ const Services: React.FC = () => {
                         </p>
 
                         {/* Features */}
-                        <div className="space-y-2 mb-4 flex-1">
+                        <div className="space-y-2 pb-6 flex-1">
                           {service.features.map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-start">
                               <CheckCircle className={`h-4 w-4 ${getColorClasses(service.color).text} mr-2 mt-0.5 flex-shrink-0`} />
@@ -366,14 +366,16 @@ const Services: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
-                        {/* CTA */}
-                        <div className={`p-3 rounded-lg bg-gradient-to-r ${getColorClasses(service.color).bg} border ${getColorClasses(service.color).border} flex-shrink-0`}>
-                          <p className={`font-semibold ${getColorClasses(service.color).text} flex items-start text-xs sm:text-sm leading-relaxed`}>
-                            <span className="mr-2 flex-shrink-0 mt-0.5">👉</span>
-                            <span>{service.cta}</span>
-                          </p>
-                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* CTA - positioned outside and overlapping the card */}
+                    <div className="absolute left-4 right-4 z-10" style={{ bottom: '-24px' }}>
+                      <div className={`p-3 rounded-lg bg-gradient-to-r ${getColorClasses(service.color).bg} border ${getColorClasses(service.color).border} shadow-lg`}>
+                        <p className={`font-semibold ${getColorClasses(service.color).text} flex items-start text-xs sm:text-sm leading-relaxed`}>
+                          <span className="mr-2 flex-shrink-0 mt-0.5">👉</span>
+                          <span>{service.cta}</span>
+                        </p>
                       </div>
                     </div>
                   </div>
