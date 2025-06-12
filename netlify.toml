@@ -1,5 +1,6 @@
 [build]
   publish = "dist"
+  command = "npm run build"
 
 [[redirects]]
   from = "/*"
@@ -7,4 +8,4 @@
   status = 200
 
 [form]
-  settings = { to = "paul@denhartogh.solutions" } 
+  settings = { submission_handling = "webhook" } 
