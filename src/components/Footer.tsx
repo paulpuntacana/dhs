@@ -57,6 +57,16 @@ const Footer: React.FC = () => {
                   {t('nav.contact')}
                 </Link>
               </li>
+              <li>
+                <a 
+                  href="https://app.denhartogh.solutions" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                >
+                  {t('footer.clientPortal')}
+                </a>
+              </li>
             </ul>
           </div>
 
