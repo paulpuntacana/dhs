@@ -205,7 +205,7 @@ const translations: Record<string, Record<string, string>> = {
     
     // About Page
     'about.title': 'About DHS',
-    'about.subtitle': 'Who are we and what do we stand for.',
+    'about.subtitle': 'AI-driven acquisition with human finesse. For those who want control over leads, rhythm in sales and insight into growth.',
     'about.founder': 'Founder DHS',
     'about.story.paragraph1': 'After years of experience in all aspects of sales — from cold prospecting to closing deals — I know how frustrating and time-consuming cold outreach can be. Many companies struggle with setting up structured campaigns, or they get responses but don\'t know how to convert them into appointments.',
     'about.story.paragraph2': 'That was the starting point for DHS. I developed a system that automates the heavy lifting of cold outreach, but always leaves room for the human approach. With smart data, AI-driven follow-up advice per lead, and clear reporting, we ensure you only need to focus on having good conversations.',
@@ -601,7 +601,7 @@ const translations: Record<string, Record<string, string>> = {
     
     // About Page
     'about.title': 'Over DHS',
-    'about.subtitle': 'Wie zijn wij en waar staan we voor.',
+    'about.subtitle': 'AI-gedreven acquisitie met menselijke finesse. Voor wie grip wil op leads, ritme in sales en zicht op groei.',
     'about.founder': 'Oprichter DHS',
     'about.story.paragraph1': 'Na jarenlange ervaring in alle onderdelen van sales — van koude acquisitie tot het sluiten van deals — weet ik hoe frustrerend en tijdrovend koude outreach kan zijn. Veel bedrijven worstelen met het opzetten van gestructureerde campagnes, of krijgen wel reacties, maar weten niet hoe ze die omzetten in afspraken.',
     'about.story.paragraph2': 'Dat was voor mij het startpunt van DHS. Ik heb een systeem ontwikkeld dat het zware werk van koude outreach automatiseert, maar altijd ruimte laat voor de menselijke aanpak. Met slimme data, AI-gestuurd opvolgadvies per lead en heldere rapportages zorgen we dat jij alleen nog hoeft te focussen op het voeren van goede gesprekken.',
@@ -1013,7 +1013,7 @@ const translations: Record<string, Record<string, string>> = {
     
     // About Page
     'about.title': 'Über DHS',
-    'about.subtitle': 'Wer wir sind und wofür wir stehen.',
+    'about.subtitle': 'KI-gesteuerte Akquise mit menschlicher Finesse. Für alle, die Kontrolle über Leads, Rhythmus im Verkauf und Einblick in das Wachstum wollen.',
     'about.founder': 'Gründer DHS',
     'about.story.paragraph1': 'Nach jahrelanger Erfahrung in allen Bereichen des Verkaufs — von kalter Akquise bis zum Abschluss von Deals — weiß ich, wie frustrierend und zeitaufwändig Cold Outreach sein kann. Viele Unternehmen haben Schwierigkeiten beim Aufbau strukturierter Kampagnen oder erhalten zwar Reaktionen, wissen aber nicht, wie sie diese in Termine umwandeln können.',
     'about.story.paragraph2': 'Das war für mich der Ausgangspunkt für DHS. Ich habe ein System entwickelt, das die schwere Arbeit des Cold Outreach automatisiert, aber immer Raum für den menschlichen Ansatz lässt. Mit intelligenten Daten, KI-gesteuerten Nachfass-Ratschlägen pro Lead und klaren Berichten sorgen wir dafür, dass Sie sich nur noch auf das Führen guter Gespräche konzentrieren müssen.',
@@ -1401,7 +1401,7 @@ const translations: Record<string, Record<string, string>> = {
     
     // About Page
     'about.title': 'Acerca de DHS',
-    'about.subtitle': 'Quiénes somos y qué representamos.',
+    'about.subtitle': 'Adquisición impulsada por IA con delicadeza humana. Para quienes quieren control sobre leads, ritmo en ventas y visión del crecimiento.',
     'about.founder': 'Fundador DHS',
     'about.story.paragraph1': 'Después de años de experiencia en todos los aspectos de las ventas — desde la prospección en frío hasta el cierre de tratos — sé lo frustrante y que consume tiempo que puede ser el cold outreach. Muchas empresas luchan con la configuración de campañas estructuradas, o reciben respuestas pero no saben cómo convertirlas en citas.',
     'about.story.paragraph2': 'Ese fue el punto de partida para DHS. Desarrollé un sistema que automatiza el trabajo pesado del cold outreach, pero siempre deja espacio para el enfoque humano. Con datos inteligentes, consejos de seguimiento impulsados por IA por lead y reportes claros, nos aseguramos de que solo necesites enfocarte en tener buenas conversaciones.',
