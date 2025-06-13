@@ -113,9 +113,14 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-6">
-          <p className="text-gray-400 text-sm text-left">
-            © 2025 Den Hartogh Solutions. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+            <p className="text-gray-400 text-sm">
+              © 2025 Den Hartogh Solutions. All rights reserved.
+            </p>
+            <p className="text-gray-500 text-sm italic">
+              {t('footer.locations')}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -54,7 +54,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Mobile: Image first, then text */}
@@ -121,8 +121,11 @@ const About: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               {t('about.philosophy.title')}
             </h2>
-            <p className="text-xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl text-white/80 max-w-4xl mx-auto mb-6 leading-relaxed">
               {t('about.philosophy.description')}
+            </p>
+            <p className="text-lg text-white/90 font-medium italic mb-12">
+              {t('about.philosophy.tagline')}
             </p>
             
             {/* Mission Statement */}
@@ -225,6 +228,10 @@ const About: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('about.company.service.title')}</h3>
                   <p className="text-gray-600">{t('about.company.service.value')}</p>
+                </div>
+                <div className="md:col-span-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('about.company.locations.title')}</h3>
+                  <p className="text-gray-600">{t('about.company.locations.value')}</p>
                 </div>
               </div>
             </div>
