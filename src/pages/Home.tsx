@@ -265,30 +265,35 @@ const Home: React.FC = () => {
                 delay={index * 150}
                 className="relative"
               >
-                <div className={`p-6 rounded-2xl transition-all duration-300 hover:scale-105 group text-center h-[300px] flex flex-col justify-between ${
+                <div className={`p-6 rounded-2xl transition-all duration-300 hover:scale-105 group text-center min-h-[300px] flex flex-col ${
                   index === 0 ? 'bg-orange-50 hover:bg-orange-100' :
                   index === 1 ? 'bg-blue-50 hover:bg-blue-100' :
                   index === 2 ? 'bg-purple-50 hover:bg-purple-100' :
                   'bg-green-50 hover:bg-green-100'
                 }`}>
-                  <div className="flex-grow flex flex-col justify-center">
-                    <div className={`text-4xl font-bold mb-2 ${
-                      index === 0 ? 'text-orange-600/30' :
-                      index === 1 ? 'text-blue-600/30' :
-                      index === 2 ? 'text-purple-600/30' :
-                      'text-green-600/30'
-                    }`}>{step.step}</div>
-                    <step.icon className={`h-12 w-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-200 ${
-                      index === 0 ? 'text-orange-600' :
-                      index === 1 ? 'text-blue-600' :
-                      index === 2 ? 'text-purple-600' :
-                      'text-green-600'
-                    }`} />
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      {step.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-gray-600 leading-relaxed mt-auto">
+                  {/* Number - fixed at top */}
+                  <div className={`text-4xl font-bold mb-4 ${
+                    index === 0 ? 'text-orange-600/30' :
+                    index === 1 ? 'text-blue-600/30' :
+                    index === 2 ? 'text-purple-600/30' :
+                    'text-green-600/30'
+                  }`}>{step.step}</div>
+                  
+                  {/* Icon */}
+                  <step.icon className={`${index === 2 ? 'h-14 w-14 mb-3' : 'h-12 w-12 mb-4'} mx-auto group-hover:scale-110 transition-transform duration-200 ${
+                    index === 0 ? 'text-orange-600' :
+                    index === 1 ? 'text-blue-600' :
+                    index === 2 ? 'text-purple-600' :
+                    'text-green-600'
+                  }`} />
+                  
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                    {step.title}
+                  </h3>
+                  
+                  {/* Description - takes remaining space */}
+                  <p className="text-sm text-gray-600 leading-relaxed flex-grow">
                     {step.description}
                   </p>
                 </div>

@@ -906,7 +906,7 @@ const translations: Record<string, Record<string, string>> = {
     'nav.cta': 'Erstgespräch buchen',
     
     // Home Page
-    'home.hero.title': 'AI Lead Generierung',
+    'home.hero.title': 'KI Lead Generierung',
     'home.hero.subtitle': 'Intelligentere Lead-Generierung – Angetrieben von KI, Getrieben von Menschen',
     'home.hero.description': 'Füllen Sie Ihre Pipeline konsistent mit hochwertigen Leads durch KI-gesteuerte Cold Outreach. Unser intelligentes System leitet Ihre Nachfassung an, um Prospects in Kunden zu verwandeln.',
     'home.hero.cta': 'Strategie-Session Buchen',
