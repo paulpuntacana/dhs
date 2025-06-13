@@ -491,7 +491,7 @@ const translations: Record<string, Record<string, string>> = {
       'nav.approach': 'Aanpak',
     'nav.about': 'Over Ons',
     'nav.contact': 'Contact',
-    'nav.cta': 'Laten we praten!',
+    'nav.cta': 'Slim aan de slag',
     
     // Home Page
     'home.hero.title': 'AI Leadgeneratie',
@@ -903,7 +903,7 @@ const translations: Record<string, Record<string, string>> = {
     'nav.approach': 'Ansatz',
     'nav.about': 'Über Uns',
     'nav.contact': 'Kontakt',
-    'nav.cta': 'Kontakt',
+    'nav.cta': 'Erstgespräch buchen',
     
     // Home Page
     'home.hero.title': 'AI Lead Generierung',
