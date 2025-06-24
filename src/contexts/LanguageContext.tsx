@@ -862,10 +862,9 @@ const translations: Record<string, Record<string, string>> = {
     'privacy.article7.content': 'Bij contact via social media (zoals LinkedIn of WhatsApp), kan DHS toegang krijgen tot profielinformatie. Deze privacyverklaring is van toepassing op de gegevens die wij hieruit verkrijgen. Voor het gebruik van social media zelf geldt de richtlijn van de respectieve platformen.',
     
     'privacy.article8.title': 'Article 8: Newsletter',
-    'privacy.article7.title': 'Artikel 7: Social Media en Communicatie',
-    'privacy.article7.content': 'Bij contact via social media (zoals LinkedIn of WhatsApp) kan DHS toegang krijgen tot profielinformatie. Dit privacybeleid is van toepassing op de gegevens die wij hieruit verkrijgen. Voor het gebruik van social media zelf geldt het beleid van het betreffende platform.',
+    'privacy.article8.content': 'You will only receive our newsletter if you have subscribed or are a customer. Each newsletter contains an option to unsubscribe.',
     
-    'privacy.article8.title': 'Artikel 8: Nieuwsbrief',
+    'privacy.article9.title': 'Article 9: Rights of Data Subjects',
     'privacy.article8.content': 'U ontvangt onze nieuwsbrief alleen als u zich hiervoor heeft aangemeld of klant bent. Elke nieuwsbrief bevat een mogelijkheid om u uit te schrijven.',
     
     'privacy.article9.title': 'Artikel 9: Rechten van betrokkenen',
