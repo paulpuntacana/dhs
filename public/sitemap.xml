@@ -51,6 +51,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/contact" />
   </url>
 
+  <url>
+    <loc>https://denhartogh.solutions/en/terms</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/terms" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/algemene-voorwaarden" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/agb" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/terminos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/terms" />
+  </url>
+
+  <url>
+    <loc>https://denhartogh.solutions/en/privacy</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/privacyverklaring" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/privacy" />
+  </url>
+
+  <url>
+    <loc>https://denhartogh.solutions/en/careers</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/careers" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/carrieres" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/karriere" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/carreras" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/careers" />
+  </url>
+
   <!-- Dutch (NL) Pages -->
   <url>
     <loc>https://denhartogh.solutions/nl</loc>
@@ -98,6 +134,42 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/kontakt" />
     <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/contacto" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/contact" />
+  </url>
+
+  <url>
+    <loc>https://denhartogh.solutions/nl/algemene-voorwaarden</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/terms" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/algemene-voorwaarden" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/agb" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/terminos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/terms" />
+  </url>
+
+  <url>
+    <loc>https://denhartogh.solutions/nl/privacyverklaring</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/privacyverklaring" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/privacy" />
+  </url>
+
+  <url>
+    <loc>https://denhartogh.solutions/nl/carrieres</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/careers" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/carrieres" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/karriere" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/carreras" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/careers" />
   </url>
 
   <!-- German (DE) Pages -->
@@ -149,6 +221,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/contact" />
   </url>
 
+  <url>
+    <loc>https://denhartogh.solutions/de/agb</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/terms" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/algemene-voorwaarden" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/agb" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/terminos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/terms" />
+  </url>
+
+  <url>
+    <loc>https://denhartogh.solutions/de/datenschutz</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/privacyverklaring" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/privacy" />
+  </url>
+
+  <url>
+    <loc>https://denhartogh.solutions/de/karriere</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/careers" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/carrieres" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/karriere" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/carreras" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/careers" />
+  </url>
+
   <!-- Spanish (ES) Pages -->
   <url>
     <loc>https://denhartogh.solutions/es</loc>
@@ -198,4 +306,40 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/contact" />
   </url>
   
+  <url>
+    <loc>https://denhartogh.solutions/es/terminos</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/terms" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/algemene-voorwaarden" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/agb" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/terminos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/terms" />
+  </url>
+
+  <url>
+    <loc>https://denhartogh.solutions/es/privacidad</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/privacyverklaring" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/privacy" />
+  </url>
+
+  <url>
+    <loc>https://denhartogh.solutions/es/carreras</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://denhartogh.solutions/en/careers" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://denhartogh.solutions/nl/carrieres" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://denhartogh.solutions/de/karriere" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://denhartogh.solutions/es/carreras" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denhartogh.solutions/en/careers" />
+  </url>
+
 </urlset> 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Send, MessageCircle, Clock, Mail, CheckCircle, HelpCircle, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import AnimatedSection from '../components/AnimatedSection';
@@ -24,30 +24,20 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    try {
-      // Create URLSearchParams for Netlify forms (alternative method)
-      const formDataForSubmit = new URLSearchParams();
-      formDataForSubmit.append('form-name', 'contact');
-      formDataForSubmit.append('name', formData.name);
-      formDataForSubmit.append('email', formData.email);
-      formDataForSubmit.append('company', formData.company);
-      formDataForSubmit.append('message', formData.message);
 
-      const response = await fetch('/', {
+    try {
+      const formElement = e.target as HTMLFormElement;
+      const formDataObj = new FormData(formElement);
+
+      await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formDataForSubmit
+        body: new URLSearchParams(formDataObj as any).toString()
       });
 
-      if (response.ok) {
-        setIsSubmitted(true);
-      } else {
-        throw new Error('Form submission failed');
-      }
+      setIsSubmitted(true);
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Er is een fout opgetreden bij het versturen van het formulier. Probeer het opnieuw of neem direct contact op via paul@denhartogh.solutions');
+      console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -126,6 +116,44 @@ const Contact: React.FC = () => {
       ]
     }
   ];
+
+  // Generate FAQ Schema.org JSON-LD
+  useEffect(() => {
+    const generateFAQSchema = () => {
+      const allFAQs = faqSections.flatMap(section => section.faqs);
+      
+      return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": allFAQs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      };
+    };
+
+    // Add or update FAQ Schema script
+    let faqSchemaScript = document.querySelector('script[type="application/ld+json"]#faq-schema');
+    if (!faqSchemaScript) {
+      faqSchemaScript = document.createElement('script');
+      faqSchemaScript.setAttribute('type', 'application/ld+json');
+      faqSchemaScript.setAttribute('id', 'faq-schema');
+      document.head.appendChild(faqSchemaScript);
+    }
+    faqSchemaScript.textContent = JSON.stringify(generateFAQSchema(), null, 2);
+
+    // Cleanup function to remove schema when component unmounts
+    return () => {
+      const schemaElement = document.querySelector('script[type="application/ld+json"]#faq-schema');
+      if (schemaElement) {
+        schemaElement.remove();
+      }
+    };
+  }, [t]);
 
   return (
     <div className="min-h-screen pt-16">
@@ -350,7 +378,7 @@ const Contact: React.FC = () => {
               {t('contact.faq.title')}
             </h2>
             <p className="text-xl text-gray-600">
-              Get answers to common questions about our AI-powered lead generation services.
+              {t('contact.faq.subtitle')}
             </p>
           </AnimatedSection>
 
