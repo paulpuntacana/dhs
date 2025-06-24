@@ -227,6 +227,82 @@ const SEOHead = () => {
       ogDescription.setAttribute('content', currentSEO.description);
     }
 
+    // Add or update Open Graph image
+    let ogImage = document.querySelector('meta[property="og:image"]');
+    if (!ogImage) {
+      ogImage = document.createElement('meta');
+      ogImage.setAttribute('property', 'og:image');
+      document.head.appendChild(ogImage);
+    }
+    ogImage.setAttribute('content', 'https://denhartogh.solutions/images/og-meta.png');
+
+    // Add or update Open Graph image dimensions
+    let ogImageWidth = document.querySelector('meta[property="og:image:width"]');
+    if (!ogImageWidth) {
+      ogImageWidth = document.createElement('meta');
+      ogImageWidth.setAttribute('property', 'og:image:width');
+      document.head.appendChild(ogImageWidth);
+    }
+    ogImageWidth.setAttribute('content', '1200');
+
+    let ogImageHeight = document.querySelector('meta[property="og:image:height"]');
+    if (!ogImageHeight) {
+      ogImageHeight = document.createElement('meta');
+      ogImageHeight.setAttribute('property', 'og:image:height');
+      document.head.appendChild(ogImageHeight);
+    }
+    ogImageHeight.setAttribute('content', '630');
+
+    // Add or update Open Graph image alt text
+    let ogImageAlt = document.querySelector('meta[property="og:image:alt"]');
+    if (!ogImageAlt) {
+      ogImageAlt = document.createElement('meta');
+      ogImageAlt.setAttribute('property', 'og:image:alt');
+      document.head.appendChild(ogImageAlt);
+    }
+    ogImageAlt.setAttribute('content', language === 'nl' 
+      ? 'DHS - AI-gedreven leadgeneratie en sales automatisering'
+      : language === 'de'
+      ? 'DHS - KI-gestützte Lead-Generierung und Vertriebsautomatisierung'
+      : language === 'es'
+      ? 'DHS - Generación de leads impulsada por IA y automatización de ventas'
+      : 'DHS - AI-powered lead generation and sales automation');
+
+    // Add or update Open Graph type
+    let ogType = document.querySelector('meta[property="og:type"]');
+    if (!ogType) {
+      ogType = document.createElement('meta');
+      ogType.setAttribute('property', 'og:type');
+      document.head.appendChild(ogType);
+    }
+    ogType.setAttribute('content', 'website');
+
+    // Add or update Open Graph URL
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (!ogUrl) {
+      ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute('content', `https://denhartogh.solutions${window.location.pathname}`);
+
+    // Add Twitter Card meta tags for better Twitter sharing
+    let twitterCard = document.querySelector('meta[name="twitter:card"]');
+    if (!twitterCard) {
+      twitterCard = document.createElement('meta');
+      twitterCard.setAttribute('name', 'twitter:card');
+      document.head.appendChild(twitterCard);
+    }
+    twitterCard.setAttribute('content', 'summary_large_image');
+
+    let twitterImage = document.querySelector('meta[name="twitter:image"]');
+    if (!twitterImage) {
+      twitterImage = document.createElement('meta');
+      twitterImage.setAttribute('name', 'twitter:image');
+      document.head.appendChild(twitterImage);
+    }
+    twitterImage.setAttribute('content', 'https://denhartogh.solutions/images/og-meta.png');
+
     // Add or update Schema.org JSON-LD
     let schemaScript = document.querySelector('script[type="application/ld+json"]#organization-schema');
     if (!schemaScript) {
