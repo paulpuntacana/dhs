@@ -861,10 +861,7 @@ const translations: Record<string, Record<string, string>> = {
     'privacy.article7.title': 'Article 7: Social Media and Communication',
     'privacy.article7.content': 'Bij contact via social media (zoals LinkedIn of WhatsApp), kan DHS toegang krijgen tot profielinformatie. Deze privacyverklaring is van toepassing op de gegevens die wij hieruit verkrijgen. Voor het gebruik van social media zelf geldt de richtlijn van de respectieve platformen.',
     
-    'privacy.article8.title': 'Article 8: Newsletter',
-    'privacy.article8.content': 'You will only receive our newsletter if you have subscribed or are a customer. Each newsletter contains an option to unsubscribe.',
-    
-    'privacy.article9.title': 'Article 9: Rights of Data Subjects',
+    'privacy.article8.title': 'Artikel 8: Nieuwsbrief',
     'privacy.article8.content': 'U ontvangt onze nieuwsbrief alleen als u zich hiervoor heeft aangemeld of klant bent. Elke nieuwsbrief bevat een mogelijkheid om u uit te schrijven.',
     
     'privacy.article9.title': 'Artikel 9: Rechten van betrokkenen',
@@ -890,17 +887,6 @@ const translations: Record<string, Record<string, string>> = {
     
     'privacy.article13.title': 'Artikel 13: Wijzigingen',
     'privacy.article13.content': 'DHS behoudt zich het recht voor dit privacybeleid te wijzigen. Wij adviseren deze verklaring regelmatig te raadplegen. De huidige versie is bijgewerkt op 12 juni 2025.',
-
-    footer: {
-      tagline: 'Transforming B2B lead generation met AI-gestuurde oplossingen',
-      quickLinks: 'Snelle Links',
-      legal: 'Juridisch',
-      jobs: 'Vacatures & Carrière',
-      terms: 'Algemene Voorwaarden',
-      privacy: 'Privacybeleid',
-      careers: 'Carrière',
-      clientPortal: 'Klantportaal',
-    },
   },
   de: {
     // Navigation
